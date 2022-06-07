@@ -16,7 +16,7 @@ export default function Footer() {
             <i><FontAwesomeIcon icon="fab fa-github" /></i>
           </a>
           <a href="https://twitch.com/jorgygfx">
-            <i><FontAwesomeIcon icon="fab fa-github" /></i>
+            <i><FontAwesomeIcon icon="fab fa-twitch" /></i>
           </a>
           <a href="https://www.youtube.com/channel/UCA78-TRtRUnIZvJwctKvDcg">
             <i><FontAwesomeIcon icon="fab fa-youtube" /></i>

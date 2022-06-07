@@ -14,3 +14,96 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.footer-basic::before {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(231,58,106,1) 0%, rgba(90,228,184,1) 0%, rgba(31,116,87,1) 100%);
+}
+
+.footer-basic {
+  padding:40px 0;
+  background: #000;
+  background: radial-gradient(rgb(22, 22, 22), rgb(17, 17, 17));
+  color: white;
+}
+
+.footer-basic ul {
+  font-family: 'Intro';
+  padding:0;
+  list-style:none;
+  text-align:center;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:0;
+}
+
+.footer-basic li {
+  padding:0 10px;
+  display: inline;
+}
+
+.footer-basic ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.7;
+  transition: all 0.5s ease;
+}
+
+.footer-basic ul a:hover {
+  opacity:1;
+  color: #33d486;
+  transition: all 0.5s ease;
+}
+
+.footer-basic footer .social {
+  font-family: 'Intro';
+  text-align:center;
+  padding-bottom: 5px;
+}
+
+.footer-basic footer .social > a {
+  font-family: 'Intro';
+  font-size: 10px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid #33d486;;
+  margin:2px 8px;
+  color:inherit;
+  opacity:0.7;
+  transition: all 0.5s ease;
+}
+.footer-basic footer .social > a > i {
+  position: relative;
+  top: 6px;
+}
+
+.footer-basic footer .social > a > i > svg {
+  width: 20px;
+  height: 20px;
+}
+
+.footer-basic footer .social > a:hover {
+  opacity:1;
+  border:1px solid #33d486;
+  color: #33d486;
+  transform: scale(1.1);
+  transition: all 0.5s ease;
+}
+
+.footer-basic footer .copyright {
+  font-family: 'Century Gothic';
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:#33d486;
+  opacity:0.7;
+  margin-bottom:0;
+}

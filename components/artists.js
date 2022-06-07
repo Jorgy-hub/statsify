@@ -1,18 +1,28 @@
 import axios from "axios";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function Artists({ token }) {
+    const [ topArtists, setTopArtists] = useState([]);
     /** Here we fetch the Top Artists of the Account */
     useEffect(() => {
-        let artists = [];
         let headers = { "Authorization": `Bearer ${token}` };
         let getArtists = async (token) => {
-            let data = await axios.get('https://api.spotify.com/v1/me/top/artists', { headers })
+            await axios.get('https://api.spotify.com/v1/me/top/artists', { headers })
             .then((res) => {
-                artists = res.data.items;
+                setTopArtists(res.data.items);
             });
         };
         getArtists();
     }, []);
-    
+    return (
+        <div>
+            {
+                topArtists.map((artist, i) => {
+                    return (
+                        <p className="artistName">{artist.name}</p>
+                    )
+                })
+            }
+        </div>
+    );
 };

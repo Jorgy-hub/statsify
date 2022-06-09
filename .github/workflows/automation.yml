@@ -1,5 +1,6 @@
-name: SpotiStats
-on: 
+name: Node.js CI
+
+on:
   push:
     branches: [ master ]
   pull_request:
@@ -7,7 +8,7 @@ on:
 
 jobs:
   build:
-  
+
     runs-on: ubuntu-latest
 
     strategy:
@@ -16,16 +17,25 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: User Node.js ${{ matrix.node-version }}
+    - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
-        node-version: ${{ matrix.node-version }}     
+        node-version: ${{ matrix.node-version }}
+      
 
-    - run: npm ci
-    - run: npm run build
-    - run: npm run export  
+    - name: Installing my packages
+      run: npm ci
 
-    - name: SpotiStats
+    - name: Build my App  
+      run: npm run build
+      env:
+        NEXT_PUBLIC_BASE_PATH: 
+    - run: npm run export
+      env:
+        NEXT_PUBLIC_BASE_PATH: 
+    - run: touch ./out/.nojekyll
+    
+    - name: SpotiStats 🚀
       uses: Uraraka-Chan/spotistats@0.1.2
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

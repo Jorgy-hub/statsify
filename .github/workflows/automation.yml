@@ -11,5 +11,8 @@ jobs:
         run: npm install
       - name: Build project assets
         run: npm run build
-      - name: Start project assets
-        run: npm run start
+      - name: Upload static webiste
+        uses: actions/upload-artifact@v2
+        with:
+          name: static-site
+          path: out/ 

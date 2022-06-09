@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/Uraraka-Chan/spotistats/compare/v0.1.1...v0.1.2) (2022-06-09)
+
+
+### Features
+
+* **Tracks:** Added top tracks and top artists to the app ([1c363bb](https://github.com/Uraraka-Chan/spotistats/commit/1c363bb58956ba26376d7ca7b88580156168185c))
+
 ### 0.1.1 (2022-06-07)
 
 

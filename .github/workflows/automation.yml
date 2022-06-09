@@ -11,3 +11,5 @@ build-project:
     run: npm install
   - name: Build project assets
     run: npm run build
+  - name: Export project assets
+    run: npm run export

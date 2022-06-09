@@ -1,43 +1,13 @@
-name: Node.js CI
-
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-
+name: Build Next.js web application
+on: push
 jobs:
-  build:
-
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [14.x]
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-      
-
-    - name: Installing my packages
-      run: npm ci
-
-    - name: Build my App  
-      run: npm run build
-      env:
-        NEXT_PUBLIC_BASE_PATH: 
-    - run: npm run export
-      env:
-        NEXT_PUBLIC_BASE_PATH: 
-    - run: touch ./out/.nojekyll
-    
-    - name: SpotiStats 🚀
-      uses: Uraraka-Chan/spotistats@0.1.2
-      with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: out
+build-project:
+  name: Build Project
+  runs-on: ubuntu-latest
+  steps:
+  - name: Checkout code
+    uses: actions/checkout@v2
+  - name: Install NPM dependencies
+    run: npm install
+  - name: Build project assets
+    run: npm run build

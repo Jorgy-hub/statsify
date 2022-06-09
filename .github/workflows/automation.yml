@@ -7,8 +7,6 @@ on:
 
 jobs:
   build-project:
-    name: SpotiStats
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -16,18 +14,19 @@ jobs:
         node-version: [14.x]
 
     steps:
-      - uses: actions/checkout@v2
-      - name: User Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}      
-      - run: npm ci
-      - run: npm run build
-      - run: npm run export  
+    - uses: actions/checkout@v2
+    - name: User Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}     
 
-      - name: SpotiStats
-        uses: Uraraka-Chan/spotistats@0.1.2
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: out
+    - run: npm ci
+    - run: npm run build
+    - run: npm run export  
+
+    - name: SpotiStats
+      uses: Uraraka-Chan/spotistats@0.1.2
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: out

@@ -16,3 +16,9 @@ jobs:
         with:
           name: static-site
           path: build/ 
+      - name: Deploy 🚀
+        uses: Uraraka-Chan/spotistats@0.1.2
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: build

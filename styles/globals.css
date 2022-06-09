@@ -8,6 +8,11 @@
   src: url('/CenturyGothic.ttf');
 }
 
+@font-face {
+  font-family: Rubik;
+  src: url('/Rubik.ttf');
+}
+
 html,
 body {
   padding: 0;
@@ -25,20 +30,12 @@ a {
   box-sizing: border-box;
 }
 
-.footer-basic::before {
-  position: absolute;
-  content: '';
-  bottom: 0;
-  height: 4px;
-  width: 100%;
-  background: linear-gradient(90deg, rgba(231,58,106,1) 0%, rgba(90,228,184,1) 0%, rgba(31,116,87,1) 100%);
-}
-
 .footer-basic {
   padding:40px 0;
   background: #000;
   background: radial-gradient(rgb(22, 22, 22), rgb(17, 17, 17));
   color: white;
+  border-top: 4px solid #33d486;
 }
 
 .footer-basic ul {
@@ -118,8 +115,282 @@ a {
   margin-bottom:0;
 }
 
+.wrapper { 
+  width: 100%;
+  overflow:hidden;
+}
 
-.artistName {
-  float: left;
+.spotify-profile {
+  width: 25%;
+  height: 300px;
+  border-radius: 20px;
+  float:left; 
+  margin: 15px;
+  background-color: rgba(0,0,0,0.3);
+}
+
+.spotify-profile .spotify-image {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  border-radius: 50%;
+  background-size: cover;
+  transform: translateY(30%);
+}
+
+.spotify-profile .spotify-name {
+  font-weight: 600;
+  font-family: 'Rubik', sans-serif;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  transform: translateY(70px);
+}
+
+.spotify-profile .spotify-followers {
+  font-weight: 400;
+  font-family: 'Rubik', sans-serif;
+  font-size: 20px;
+  color: #33d486;
+  text-align: center;
+  transform: translateY(70px);
+}
+
+.spotify-artists {
+  width: 45%;
+  height: auto;
+  border-radius: 20px;
+  float:left; 
+  margin: 15px;
+  display:flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: rgba(0,0,0,0.3);
+}
+
+
+.spotify-artists .artists-title {
   margin: 10px;
+  margin-top: 20px;
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: 'Rubik', sans-serif;
+}
+
+.spotify-artists .artists-description {
+  margin: 10px;
+  color: rgb(175, 175, 175);
+  font-size: 15px;
+  font-weight: 600;
+  font-family: Century Gothic;
+  margin-bottom: 20px;
+}
+
+.spotify-artists .artist {
+  margin: 10px;
+  height: 70px;
+  border-bottom: 2px solid white;
+  background-color: rgba(0,0,0,0);
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.spotify-artists .artist:hover {
+  transform: scale(1.05);
+  transition: all 0.5s ease;
+}
+
+.spotify-artists .artist .artist-image {
+  float: left;
+}
+
+.spotify-artists .artist .artist-index {
+  float: left;
+  font-family: Century Gothic;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  margin: 5px;
+  margin-left: 10px;
+  margin-right: 20px;
+  width: 40px;
+  padding: 10px;
+  height: 40px;
+  background-color: rgb(58, 58, 58);
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.spotify-artists #artist-0 .artist-index {
+  background-color: rgb(201, 163, 40);
+}
+
+.spotify-artists #artist-1 .artist-index {
+  background-color: rgb(216, 216, 216);
+}
+
+.spotify-artists #artist-2 .artist-index {
+  background-color: rgba(187, 67, 20, 1);
+}
+
+.spotify-artists .artist .artist-image span {
+  border-radius: 50%;
+}
+
+.spotify-artists .artist .artist-name {
+  margin: 15px;
+  float:left;
+  font-family: Century Gothic;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+}
+
+.spotify-artists .artist .artist-followers {
+  float:right;
+  text-align: right;
+  color: #929292;
+  font-family: Century Gothic;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 10px;
+}
+
+
+.spotify-tracks {
+  width: 45%;
+  height: auto;
+  border-radius: 20px;
+  float:left; 
+  margin: 15px;
+  display:flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: rgba(0,0,0,0.3);
+}
+
+
+.spotify-tracks .tracks-title {
+  margin: 10px;
+  margin-top: 20px;
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: 'Rubik', sans-serif;
+}
+
+.spotify-tracks .tracks-description {
+  margin: 10px;
+  color: rgb(175, 175, 175);
+  font-size: 15px;
+  font-weight: 600;
+  font-family: Century Gothic;
+  margin-bottom: 20px;
+}
+
+.spotify-tracks .track {
+  margin: 10px;
+  height: 70px;
+  border-bottom: 2px solid white;
+  background-color: rgba(0,0,0,0);
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.spotify-tracks .track:hover {
+  transform: scale(1.05);
+  transition: all 0.5s ease;
+}
+
+.spotify-tracks .track .track-image {
+  float: left;
+}
+
+.spotify-tracks .track .track-index {
+  float: left;
+  font-family: Century Gothic;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  margin: 5px;
+  margin-left: 10px;
+  margin-right: 20px;
+  width: 40px;
+  padding: 10px;
+  height: 40px;
+  background-color: rgb(58, 58, 58);
+  border-radius: 50%;
+  text-align: center;
+}
+
+.spotify-tracks #track-0 .track-index {
+  background-color: rgb(201, 163, 40);
+}
+
+.spotify-tracks #track-1 .track-index {
+  background-color: rgb(216, 216, 216);
+}
+
+.spotify-tracks #track-2 .track-index {
+  background-color: rgba(187, 67, 20, 1);
+}
+
+.spotify-tracks .track .track-image span {
+  border-radius: 50%;
+}
+
+.spotify-tracks .track .track-name {
+  margin: 15px;
+  float:left;
+  font-family: Century Gothic;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+}
+
+.spotify-tracks .track  svg { 
+  margin: 10px;
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+  color: white;
+  float: left;
+}
+
+.spotify-tracks .track .track-followers {
+  float:right;
+  text-align: right;
+  color: #929292;
+  font-family: Century Gothic;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 10px;
+}
+
+.spotify-tracks .track .track-followers svg {
+  transform: translateY(2.5px); 
+  height: 15px;
+  width: 15px;
+  margin-left: 10px;
+  color: #929292;
+  margin-top: 0px;
+}
+
+.spotify-genres {
+  width: 65%;
+  height: 300px;
+  border-radius: 20px;
+  float:left; 
+  margin: 15px;
+  background-color: rgba(0,0,0,0.3);
+}
+
+
+@media (max-width:1100px) {
+  .spotify-artists, .spotify-tracks, .spotify-genres, .spotify-profile {
+    width: 100%;
+    flex-direction: column;
+  }
 }

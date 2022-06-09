@@ -7,6 +7,9 @@ import { authEndpoint, clientId, redirectUri, scopes } from '../config_example';
 import styles from '../styles/Home.module.css';
 import Footer from '../components/footer';
 import Artists from '../components/artists';
+import Tracks from '../components/tracks';
+import User from '../components/user';
+import Genres from '../components/genres';
 
 export default function Home() {
   /** Spotify Token State */
@@ -36,8 +39,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        {
-          (!token &&
+        {!token && (
           <a
             className="btn btn--loginApp-link"
             href={`${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
@@ -46,13 +48,17 @@ export default function Home() {
           >
             Login to Spotify
           </a>
-          )  
-      }
-      {
-        (token && <Artists token={token} />)
-      }
+        )}
+        {token && (
+          <div className="wrapper">
+            <User token={token} />
+            <Genres token={token} />
+            <Artists token={token} />
+            <Tracks token={token} />
+          </div>
+        )}
       </main>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

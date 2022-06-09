@@ -9,12 +9,12 @@ export default function Artists({ token }) {
   const [topArtists, setTopArtists] = useState([]);
 
   /** Here we fetch the Top Artists of the Account */
-  const headers = { Authorization: `Bearer ${token}` };
-  const getArtists = useCallback(async token => {
-    await axios.get('https://api.spotify.com/v1/me/top/artists', { headers }).then(res => {
+  const getArtists = useCallback(async () => {
+    return axios.get('https://api.spotify.com/v1/me/top/artists', { headers: { Authorization: `Bearer ${token}` } })
+    .then(res => {
       setTopArtists(res.data.items);
     });
-  }, []);
+  }, [token]);
 
   useEffect(() => {
     getArtists();

@@ -1,4 +1,3 @@
-
 import { useEffect, useState, useCallback } from "react";
 import axios from "axios";
 
@@ -7,15 +6,13 @@ export default function User( { token } ) {
     const [ avatar, setAvatar ] = useState("https://i.pinimg.com/originals/a3/e6/50/a3e650a67d4422433d94eb032492bbc7.png");
     
     /** Here we fetch the Top Artists of the Account */
-    const headers = { "Authorization": `Bearer ${token}` };
-    const getProfile = useCallback(async (token) => {
-        await axios.get('https://api.spotify.com/v1/me', { headers })
+    const getProfile = useCallback(async () => {
+        return axios.get('https://api.spotify.com/v1/me', { headers: { "Authorization": `Bearer ${token}` } })
         .then((res) => {
             setUser(res.data);
             setAvatar(res.data.images[0].url);
-            console.log(res.data);
-        })
-    }, []);
+        });
+    }, [token]);
 
     useEffect(() => {      
         getProfile();

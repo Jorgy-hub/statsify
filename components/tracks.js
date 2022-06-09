@@ -1,9 +1,6 @@
 import axios from 'axios';
 import Link from 'next/link';
-import Image from 'next/image';
 import { useEffect, useState, useCallback } from 'react';
-
-import { numberWithCommas } from '../utils/number';
 
 import { library, config } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -16,12 +13,12 @@ export default function Tracks({ token }) {
   const [ topTracks, setTopTracks ] = useState([]);
 
   /** Here we fetch the Top Artists of the Account */
-  const headers = { Authorization: `Bearer ${token}` };
-  const getTracks = useCallback(async token => {
-    await axios.get('https://api.spotify.com/v1/me/top/tracks', { headers }).then(res => {
+  const getTracks = useCallback(async () => {
+    return axios.get('https://api.spotify.com/v1/me/top/tracks', { headers: { Authorization: `Bearer ${token}` } })
+    .then(res => {
       setTopTracks(res.data.items);
     });
-  }, []);
+  }, [token]);
 
   useEffect(() => {
     getTracks();

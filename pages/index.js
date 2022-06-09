@@ -5,11 +5,11 @@ import { useEffect, useState } from 'react';
 /** Local Files */
 import { authEndpoint, clientId, redirectUri, scopes } from '../config_example';
 import styles from '../styles/Home.module.css';
-import Footer from '../components/footer';
-import Artists from '../components/artists';
-import Tracks from '../components/tracks';
-import User from '../components/user';
-import Genres from '../components/genres';
+import Footer from '../components/Footer';
+import Artists from '../components/Artists';
+import Tracks from '../components/Tracks';
+import User from '../components/User';
+import Genres from '../components/Genres';
 
 export default function Home() {
   /** Spotify Token State */

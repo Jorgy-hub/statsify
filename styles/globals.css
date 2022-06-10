@@ -194,6 +194,7 @@ a {
   background-color: rgba(0,0,0,0);
   cursor: pointer;
   transition: all 0.5s ease;
+  overflow: hidden;
 }
 
 .spotify-artists .artist:hover {
@@ -246,6 +247,7 @@ a {
   font-size: 15px;
   font-weight: 600;
   color: white;
+  width: 50%;
 }
 
 .spotify-artists .artist .artist-followers {
@@ -297,6 +299,7 @@ a {
   background-color: rgba(0,0,0,0);
   cursor: pointer;
   transition: all 0.5s ease;
+  overflow:hidden;
 }
 
 .spotify-tracks .track:hover {
@@ -310,6 +313,7 @@ a {
 
 .spotify-tracks .track .track-index {
   float: left;
+  width: 30%;
   font-family: Century Gothic;
   font-size: 15px;
   font-weight: 600;
@@ -342,6 +346,7 @@ a {
 }
 
 .spotify-tracks .track .track-name {
+  width:50%;
   margin: 15px;
   float:left;
   font-family: Century Gothic;

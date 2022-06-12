@@ -1,0 +1,19 @@
+export default function Credits() {
+  return (
+    <div className="credits">
+      <div className="credits-title">About the project</div>
+      <div className="credits-description">
+        SpotiStats or Jorgify is an ad-free and open source website made with Next.js
+        <br />
+        I originally created this website for my girlfriend since she uses Spotify a lot and loves the music.
+        <br />
+        The only developer of this project is me Jorgy or Uraraka-Chan in GitHub, if you enjoy please share it!
+      </div>
+      <div className="credits-profiles">
+        <div className="profile" style={{ backgroundImage: 'url(https://avatars.githubusercontent.com/u/71365133?v=4)' }}>
+          <span className="profile-name">Uraraka-Chan</span>
+        </div>
+      </div>
+    </div>
+  );
+}

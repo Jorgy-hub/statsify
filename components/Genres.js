@@ -18,9 +18,13 @@ export default function Genres({ token }) {
           artist.genres?.map(genre => genresTemp.push(genre));
         });
         let randomColor = () =>
-          'rgba(' + Math.floor(Math.random() * 256) + ', ' 
-                  + Math.floor(Math.random() * 256) + ',' 
-                  + Math.floor(Math.random() * 256) + ', 0.5)';
+          'rgba(' +
+          Math.floor(Math.random() * 256) +
+          ', ' +
+          Math.floor(Math.random() * 256) +
+          ',' +
+          Math.floor(Math.random() * 256) +
+          ', 0.5)';
         let genresCount = CountArrayItems(genresTemp);
         let data = {
           labels: Object.keys(genresCount),
@@ -44,9 +48,14 @@ export default function Genres({ token }) {
 
   return (
     <div className="spotify-genres">
-      <div className='genres-info'>
-          <div className='genres-title'>Top Genres</div>
-          <div className='genres-description'>The Genres you most listen in spotify!</div>
+      <div className="genres-info">
+        <div className="genres-title">Top Genres</div>
+        <div className="genres-description">The Genres you most listen in spotify!</div>
+        <div className="genres-container">
+          {isMounted && genres.labels.map((g, i) => (
+            <div style={{backgroundColor: genres.datasets[0].backgroundColor[i]}} key={i}>{g}</div>
+          ))}
+        </div>
       </div>
       <div className="genres">
         {isMounted && <Doughnut data={genres} width={250} height={250} options={{ maintainAspectRatio: false }} />}

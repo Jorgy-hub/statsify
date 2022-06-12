@@ -264,6 +264,16 @@ a {
   transform: translateY(30%);
 }
 
+.spotify-profile .spotify-country {
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  position: absolute;
+  border-radius: 50%;
+  outline: solid 10px #0B0B0B;
+  left: 17%;
+}
+
 .spotify-profile .spotify-name {
   font-weight: 600;
   font-family: 'Rubik', sans-serif;
@@ -529,6 +539,7 @@ a {
   font-size: 30px;
   font-weight: 600;
   font-family: 'Rubik', sans-serif;
+  margin: 10px;
   margin-top: 10px;
 }
 
@@ -538,6 +549,23 @@ a {
   font-size: 15px;
   font-weight: 600;
   font-family: Century Gothic;
+}
+
+.spotify-genres .genres-info .genres-container {
+  margin: 5px;
+  height: 170px;
+  overflow: hidden;
+}
+
+.spotify-genres .genres-info .genres-container div{
+  display: flex;
+  float:left;
+  margin: 5px;
+  border-radius: 6px;
+  padding: 2px;
+  font-size: auto;
+  color: rgb(236, 236, 236);
+  font-family: 'Rubik', sans-serif;
 }
 
 .spotify-genres .genres {
@@ -613,5 +641,20 @@ a {
     margin:auto;
     margin-bottom: 20px;
     flex-direction: column;
+  }
+  .spotify-profile .spotify-country {
+    left:55%
+  }
+  .spotify-genres {
+    height: auto;
+  }
+}
+
+@media (max-width:630px) {
+  .spotify-tracks .track .track-followers {
+    display: none;
+  }
+  .spotify-artists .artist .artist-followers {
+    display: none;
   }
 }

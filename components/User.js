@@ -18,7 +18,8 @@ export default function User({ token }) {
         setMount(true);
       })
       .catch(err => {
-        window.location = '/';
+        if(err.response.status != 503)
+          window.location = '/'; 
       });
   }, [token]);
 

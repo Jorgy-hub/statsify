@@ -31,9 +31,13 @@ export default function User({ token }) {
       {isMount && (
         <div className="spotify-profile">
           <div className="spotify-image" style={{ backgroundImage: `url(${avatar})` }}></div>
-          <div className="spotify-country" style={{ backgroundImage: `url(https://hatscripts.github.io/circle-flags/flags/${user.country.toLowerCase()}.svg)` }}></div>
+          <div
+            className="spotify-country"
+            style={{
+              backgroundImage: `url(https://hatscripts.github.io/circle-flags/flags/${user.country.toLowerCase()}.svg)`,
+            }}
+          ></div>
           <div className="spotify-name">{user.display_name}</div>
-
           <div className="spotify-followers">{user.followers?.total} Followers</div>
         </div>
       )}

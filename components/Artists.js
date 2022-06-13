@@ -10,10 +10,11 @@ export default function Artists({ token }) {
 
   /** Here we fetch the Top Artists of the Account */
   const getArtists = useCallback(async () => {
-    return axios.get('https://api.spotify.com/v1/me/top/artists', { headers: { Authorization: `Bearer ${token}` } })
-    .then(res => {
-      setTopArtists(res.data.items);
-    });
+    return axios
+      .get('https://api.spotify.com/v1/me/top/artists', { headers: { Authorization: `Bearer ${token}` } })
+      .then(res => {
+        setTopArtists(res.data.items);
+      });
   }, [token]);
 
   useEffect(() => {
@@ -26,7 +27,12 @@ export default function Artists({ token }) {
       <div className="artists-description">The Artists you most listen in spotify!</div>
       {topArtists.map((artist, i) => {
         return (
-          <div className="artist" key={i} id={`artist-${i}`} href={artist.external_urls?.spotify || ''}>
+          <div
+            className="artist"
+            key={i}
+            id={`artist-${i}`}
+            onClick={() => (window.location = artist.external_urls?.spotify)}
+          >
             <div className="artist-index">{i + 1}</div>
             <div className="artist-image">
               <Image src={artist.images[0].url} alt={artist.name} width={50} height={50} />

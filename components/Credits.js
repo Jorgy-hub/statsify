@@ -10,8 +10,12 @@ export default function Credits() {
         The only developer of this project is me Jorgy or Uraraka-Chan in GitHub, if you enjoy please share it!
       </div>
       <div className="credits-profiles">
-        <div className="profile" style={{ backgroundImage: 'url(https://avatars.githubusercontent.com/u/71365133?v=4)' }}>
-          <span className="profile-name">Uraraka-Chan</span>
+        <div
+          className="profile"
+          style={{ backgroundImage: 'url(https://avatars.githubusercontent.com/u/71365133?v=4)' }}
+          onClick={() => (window.location = 'https://www.instagram.com/jorgy.ts/')}
+        >
+          <span className="profile-name">jorgy.ts</span>
         </div>
       </div>
     </div>

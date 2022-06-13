@@ -1,5 +1,6 @@
 /** Imported Libraries */
 import Head from 'next/head';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 /** Local Files */
@@ -32,15 +33,41 @@ export default function Home() {
     setToken(Token);
   }, []);
 
+  useEffect(() => {
+    const debounce = fn => {
+      let frame;
+      return (...params) => {
+        if (frame) cancelAnimationFrame(frame);
+        frame = requestAnimationFrame(() => {
+          fn(...params);
+        });
+      };
+    };
+    const storeScroll = () => {
+      document.documentElement.dataset.scroll = window.scrollY;
+    };
+    document.addEventListener('scroll', debounce(storeScroll), {
+      passive: true,
+    });
+    storeScroll();
+  });
+
   return (
     <div className={styles.container}>
       <Head>
-        <title>I love you Dania</title>
-        <meta name="description" content="I love you Dania" />
-        <link rel="icon" href="/favicon.ico" />
+        <title>SpotiStats</title>
+        <meta
+          name="description"
+          content="Check your Spotify Stats for free without Ads!\nFollow @jorgy.ts on Instagram for more content"
+        />
+        <meta name="theme-color" content="#33d486"></meta>
+        <link rel="icon" href="/icon.png" />
       </Head>
-
-      <Loader/>
+      <div className="navbar">
+        <div className="logo" />
+        <div className="title">SpotiStats</div>
+      </div>
+      <Loader />
       <main className={styles.main}>
         {!token && (
           <a
@@ -53,15 +80,15 @@ export default function Home() {
           </a>
         )}
         <div className={styles['spotify-container']}>
-        {token && (
-          <div className="wrapper">
-            <User token={token} />
-            <Genres token={token} />
-            <Artists token={token} />
-            <Tracks token={token} />
-            <Credits/>
-          </div>
-        )}
+          {token && (
+            <div className="wrapper">
+              <User token={token} />
+              <Genres token={token} />
+              <Artists token={token} />
+              <Tracks token={token} />
+              <Credits />
+            </div>
+          )}
         </div>
       </main>
       <Footer />

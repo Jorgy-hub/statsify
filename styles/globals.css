@@ -13,7 +13,10 @@
   src: url('/Rubik.ttf');
 }
 
-
+@font-face {
+  font-family: Proxima Nova;
+  src: url(/ProximaNova.otf);
+}
 .loader {
   background: #000;
   background: radial-gradient(#222, #000);
@@ -49,7 +52,13 @@
   width: 100px;
 }
 
-.loader-line {
+.loader-line-1,
+.loader-line-2,
+.loader-line-3,
+.loader-line-4,
+.loader-line-5,
+.loader-line-6,
+.loader-line-7 {
   border: 4px solid transparent;
   border-radius: 100%;
   box-sizing: border-box;
@@ -92,32 +101,218 @@
   }
 }
 
-.loader-line-wrap:nth-child(1) .loader-line {
+.loader-line-wrap:nth-child(1) .loader-line-1 {
   border-color: hsl(61, 100%, 68%);
   height: 90px;
   width: 90px;
   top: 7px;
 }
-.loader-line-wrap:nth-child(2) .loader-line {
+.loader-line-wrap:nth-child(2) .loader-line-1 {
   border-color: hsl(0, 0%, 100%);
   height: 76px;
   width: 76px;
   top: 14px;
 }
-.loader-line-wrap:nth-child(3) .loader-line {
+.loader-line-wrap:nth-child(3) .loader-line-1 {
   border-color: hsl(263, 80%, 60%);
   height: 62px;
   width: 62px;
   top: 21px;
 }
-.loader-line-wrap:nth-child(4) .loader-line {
+.loader-line-wrap:nth-child(4) .loader-line-1 {
   border-color: hsl(0, 0%, 0%);
   height: 48px;
   width: 48px;
   top: 28px;
 }
-.loader-line-wrap:nth-child(5) .loader-line {
+.loader-line-wrap:nth-child(5) .loader-line-1 {
   border-color: hsla(61, 100%, 68%, 0);
+  height: 34px;
+  width: 34px;
+  top: 35px;
+}
+
+.loader-line-wrap:nth-child(1) .loader-line-2 {
+  border-color: hsl(187, 100%, 68%);
+  height: 90px;
+  width: 90px;
+  top: 7px;
+}
+.loader-line-wrap:nth-child(2) .loader-line-2 {
+  border-color: hsl(315, 100%, 85%);
+  height: 76px;
+  width: 76px;
+  top: 14px;
+}
+.loader-line-wrap:nth-child(3) .loader-line-2 {
+  border-color: hsl(0, 0%, 100%);
+  height: 62px;
+  width: 62px;
+  top: 21px;
+}
+.loader-line-wrap:nth-child(4) .loader-line-2 {
+  border-color: hsl(315, 100%, 85%);
+  height: 48px;
+  width: 48px;
+  top: 28px;
+}
+.loader-line-wrap:nth-child(5) .loader-line-2 {
+  border-color: hsl(187, 100%, 68%);
+  height: 34px;
+  width: 34px;
+  top: 35px;
+}
+
+.loader-line-wrap:nth-child(1) .loader-line-3 {
+  border-color: hsl(0, 80%, 60%);
+  height: 90px;
+  width: 90px;
+  top: 7px;
+}
+.loader-line-wrap:nth-child(2) .loader-line-3 {
+  border-color: hsl(60, 80%, 60%);
+  height: 76px;
+  width: 76px;
+  top: 14px;
+}
+.loader-line-wrap:nth-child(3) .loader-line-3 {
+  border-color: hsl(120, 80%, 60%);
+  height: 62px;
+  width: 62px;
+  top: 21px;
+}
+.loader-line-wrap:nth-child(4) .loader-line-3 {
+  border-color: hsl(180, 80%, 60%);
+  height: 48px;
+  width: 48px;
+  top: 28px;
+}
+.loader-line-wrap:nth-child(5) .loader-line-3 {
+  border-color: hsl(240, 80%, 60%);
+  height: 34px;
+  width: 34px;
+  top: 35px;
+}
+
+.loader-line-wrap:nth-child(1) .loader-line-4 {
+  border-color: hsl(313, 100%, 61%);
+  height: 90px;
+  width: 90px;
+  top: 7px;
+}
+.loader-line-wrap:nth-child(2) .loader-line-4 {
+  border-color: hsl(313, 100%, 61%);
+  height: 76px;
+  width: 76px;
+  top: 14px;
+}
+.loader-line-wrap:nth-child(3) .loader-line-4 {
+  border-color: hsl(49, 100%, 50%);
+  height: 62px;
+  width: 62px;
+  top: 21px;
+}
+.loader-line-wrap:nth-child(4) .loader-line-4 {
+  border-color: hsl(199, 100%, 60%);
+  height: 48px;
+  width: 48px;
+  top: 28px;
+}
+.loader-line-wrap:nth-child(5) .loader-line-4 {
+  border-color: hsl(199, 100%, 60%);
+  height: 34px;
+  width: 34px;
+  top: 35px;
+}
+
+.loader-line-wrap:nth-child(1) .loader-line-5 {
+  border-color: hsl(318, 75%, 46%);
+  height: 90px;
+  width: 90px;
+  top: 7px;
+}
+.loader-line-wrap:nth-child(2) .loader-line-5 {
+  border-color: hsl(318, 75%, 46%);
+  height: 76px;
+  width: 76px;
+  top: 14px;
+}
+.loader-line-wrap:nth-child(3) .loader-line-5 {
+  border-color: hsl(283, 70%, 41%);
+  height: 62px;
+  width: 62px;
+  top: 21px;
+}
+.loader-line-wrap:nth-child(4) .loader-line-5 {
+  border-color: hsl(241, 98%, 58%);
+  height: 48px;
+  width: 48px;
+  top: 28px;
+}
+.loader-line-wrap:nth-child(5) .loader-line-5 {
+  border-color: hsl(241, 98%, 58%);
+  height: 34px;
+  width: 34px;
+  top: 35px;
+}
+
+.loader-line-wrap:nth-child(1) .loader-line-6 {
+  border-color: hsl(0, 0%, 0%);
+  height: 90px;
+  width: 90px;
+  top: 7px;
+}
+.loader-line-wrap:nth-child(2) .loader-line-6 {
+  border-color: hsl(0, 0%, 55%);
+  height: 76px;
+  width: 76px;
+  top: 14px;
+}
+.loader-line-wrap:nth-child(3) .loader-line-6 {
+  border-color: hsl(0, 0%, 100%);
+  height: 62px;
+  width: 62px;
+  top: 21px;
+}
+.loader-line-wrap:nth-child(4) .loader-line-6 {
+  border-color: hsl(308, 64%, 39%);
+  height: 48px;
+  width: 48px;
+  top: 28px;
+}
+.loader-line-wrap:nth-child(5) .loader-line-6 {
+  border-color: hsla(241, 98%, 58%, 0);
+  height: 34px;
+  width: 34px;
+  top: 35px;
+}
+
+.loader-line-wrap:nth-child(1) .loader-line-7 {
+  border-color: hsl(320, 92%, 54%);
+  height: 90px;
+  width: 90px;
+  top: 7px;
+}
+.loader-line-wrap:nth-child(2) .loader-line-7 {
+  border-color: hsl(310, 64%, 71%);
+  height: 76px;
+  width: 76px;
+  top: 14px;
+}
+.loader-line-wrap:nth-child(3) .loader-line-7 {
+  border-color: hsl(0, 0%, 100%);
+  height: 62px;
+  width: 62px;
+  top: 21px;
+}
+.loader-line-wrap:nth-child(4) .loader-line-7 {
+  border-color: hsl(9, 81%, 64%);
+  height: 48px;
+  width: 48px;
+  top: 28px;
+}
+.loader-line-wrap:nth-child(5) .loader-line-7 {
+  border-color: hsl(9, 71%, 52%);
   height: 34px;
   width: 34px;
   top: 35px;
@@ -141,8 +336,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
 }
 
 a {
@@ -154,8 +349,41 @@ a {
   box-sizing: border-box;
 }
 
+.navbar {
+  font-family: Proxima Nova;
+  font-size: 50px;
+  font-weight: 600;
+  color: white;
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 1);
+  z-index: 99;
+  transition: all 0.5s ease;
+}
+
+html:not([data-scroll='0']) body .navbar {
+  background-color: rgba(17, 17, 17, 0.74);
+  transition: all 0.5s ease;
+}
+
+.navbar .title {
+  transform: translateY(-70%);
+}
+
+.navbar .logo {
+  display: inline;
+  margin-right: 20px;
+  border-radius: 20px;
+  width: 50px;
+  height: 50px;
+  background-image: '/logo.png';
+  background-size: cover;
+}
+
 .footer-basic {
-  padding:40px 0;
+  padding: 40px 0;
   background: #000;
   background: radial-gradient(rgb(22, 22, 22), rgb(17, 17, 17));
   color: white;
@@ -164,51 +392,51 @@ a {
 
 .footer-basic ul {
   font-family: 'Intro';
-  padding:0;
-  list-style:none;
-  text-align:center;
-  font-size:18px;
-  line-height:1.6;
-  margin-bottom:0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
 }
 
 .footer-basic li {
-  padding:0 10px;
+  padding: 0 10px;
   display: inline;
 }
 
 .footer-basic ul a {
-  color:inherit;
-  text-decoration:none;
-  opacity:0.7;
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.7;
   transition: all 0.5s ease;
 }
 
 .footer-basic ul a:hover {
-  opacity:1;
+  opacity: 1;
   color: #33d486;
   transition: all 0.5s ease;
 }
 
 .footer-basic footer .social {
   font-family: 'Intro';
-  text-align:center;
+  text-align: center;
   padding-bottom: 5px;
 }
 
 .footer-basic footer .social > a {
   font-family: 'Intro';
   font-size: 10px;
-  width:40px;
-  height:40px;
-  line-height:40px;
-  display:inline-block;
-  text-align:center;
-  border-radius:50%;
-  border:1px solid #33d486;;
-  margin:2px 8px;
-  color:inherit;
-  opacity:0.7;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #33d486;
+  margin: 2px 8px;
+  color: inherit;
+  opacity: 0.7;
   transition: all 0.5s ease;
 }
 .footer-basic footer .social > a > i {
@@ -222,8 +450,8 @@ a {
 }
 
 .footer-basic footer .social > a:hover {
-  opacity:1;
-  border:1px solid #33d486;
+  opacity: 1;
+  border: 1px solid #33d486;
   color: #33d486;
   transform: scale(1.1);
   transition: all 0.5s ease;
@@ -231,28 +459,28 @@ a {
 
 .footer-basic footer .copyright {
   font-family: 'Century Gothic';
-  margin-top:15px;
-  text-align:center;
-  font-size:13px;
-  color:#33d486;
-  opacity:0.7;
-  margin-bottom:0;
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #33d486;
+  opacity: 0.7;
+  margin-bottom: 0;
 }
 
-.wrapper { 
+.wrapper {
   width: 100%;
   padding: 0rem 2rem;
-  display:inline-block;
-  overflow:hidden;
+  display: inline-block;
+  overflow: hidden;
 }
 
 .spotify-profile {
   width: 25%;
   height: 300px;
   border-radius: 20px;
-  float:left; 
+  float: left;
   margin: 15px;
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .spotify-profile .spotify-image {
@@ -270,13 +498,13 @@ a {
   background-size: cover;
   position: absolute;
   border-radius: 50%;
-  outline: solid 10px #0B0B0B;
+  outline: solid 10px #0b0b0b;
   left: 17%;
 }
 
 .spotify-profile .spotify-name {
   font-weight: 600;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Proxima Nova';
   font-size: 30px;
   color: white;
   text-align: center;
@@ -296,14 +524,13 @@ a {
   width: 45%;
   height: auto;
   border-radius: 20px;
-  float:left; 
+  float: left;
   margin: 15px;
-  display:flex;
+  display: flex;
   flex-direction: column;
   padding: 20px;
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0, 0, 0, 0.3);
 }
-
 
 .spotify-artists .artists-title {
   margin: 10px;
@@ -311,7 +538,7 @@ a {
   color: white;
   font-size: 30px;
   font-weight: 600;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Proxima Nova';
 }
 
 .spotify-artists .artists-description {
@@ -327,7 +554,7 @@ a {
   margin: 10px;
   height: 70px;
   border-bottom: 2px solid white;
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0);
   cursor: pointer;
   transition: all 0.5s ease;
   overflow: hidden;
@@ -378,7 +605,7 @@ a {
 
 .spotify-artists .artist .artist-name {
   margin: 15px;
-  float:left;
+  float: left;
   font-family: Century Gothic;
   font-size: 15px;
   font-weight: 600;
@@ -387,7 +614,7 @@ a {
 }
 
 .spotify-artists .artist .artist-followers {
-  float:right;
+  float: right;
   text-align: right;
   color: #929292;
   font-family: Century Gothic;
@@ -396,19 +623,17 @@ a {
   margin: 10px;
 }
 
-
 .spotify-tracks {
   width: 45%;
   height: auto;
   border-radius: 20px;
-  float:left; 
+  float: left;
   margin: 15px;
-  display:flex;
+  display: flex;
   flex-direction: column;
   padding: 20px;
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0, 0, 0, 0.3);
 }
-
 
 .spotify-tracks .tracks-title {
   margin: 10px;
@@ -416,7 +641,7 @@ a {
   color: white;
   font-size: 30px;
   font-weight: 600;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Proxima Nova';
 }
 
 .spotify-tracks .tracks-description {
@@ -432,10 +657,10 @@ a {
   margin: 10px;
   height: 70px;
   border-bottom: 2px solid white;
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0);
   cursor: pointer;
   transition: all 0.5s ease;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 .spotify-tracks .track:hover {
@@ -482,16 +707,16 @@ a {
 }
 
 .spotify-tracks .track .track-name {
-  width:50%;
+  width: 50%;
   margin: 15px;
-  float:left;
+  float: left;
   font-family: Century Gothic;
   font-size: 15px;
   font-weight: 600;
   color: white;
 }
 
-.spotify-tracks .track  svg { 
+.spotify-tracks .track svg {
   margin: 10px;
   width: 30px;
   height: 30px;
@@ -501,7 +726,7 @@ a {
 }
 
 .spotify-tracks .track .track-followers {
-  float:right;
+  float: right;
   text-align: right;
   color: #929292;
   font-family: Century Gothic;
@@ -511,7 +736,7 @@ a {
 }
 
 .spotify-tracks .track .track-followers svg {
-  transform: translateY(2.5px); 
+  transform: translateY(2.5px);
   height: 15px;
   width: 15px;
   margin-left: 10px;
@@ -523,9 +748,9 @@ a {
   width: 65%;
   height: 300px;
   border-radius: 20px;
-  float:left; 
+  float: left;
   margin: 15px;
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .spotify-genres .genres-info {
@@ -538,7 +763,7 @@ a {
   color: white;
   font-size: 30px;
   font-weight: 600;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Proxima Nova';
   margin: 10px;
   margin-top: 10px;
 }
@@ -557,9 +782,9 @@ a {
   overflow: hidden;
 }
 
-.spotify-genres .genres-info .genres-container div{
+.spotify-genres .genres-info .genres-container div {
   display: flex;
-  float:left;
+  float: left;
   margin: 5px;
   border-radius: 6px;
   padding: 2px;
@@ -575,16 +800,16 @@ a {
 }
 
 .credits {
-  width: 90%;
+  width: 91.5%;
   height: auto;
   border-radius: 20px;
-  float:left; 
+  float: left;
   margin: 15px;
-  display:flex;
+  display: flex;
   flex-direction: column;
   padding: 20px;
   text-align: center;
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .credits .credits-title {
@@ -606,7 +831,7 @@ a {
 }
 
 .credits .credits-profiles {
-  margin:auto;
+  margin: auto;
   margin-top: 20px;
 }
 
@@ -618,10 +843,9 @@ a {
 }
 
 .credits .credits-profiles .profile .profile-name {
-  margin:auto;
+  margin: auto;
   width: 100px;
   background-color: rgb(7, 7, 7);
-  padding: 3px;
   color: white;
   font-weight: 600;
   font-family: Century Gothic;
@@ -629,28 +853,34 @@ a {
   border-radius: 8px;
   position: relative;
   transform: translateX(50px);
+  padding: 5px;
+  text-align: center;
 }
 
 .credits .credits-profiles .profile:hover > .profile-name {
   display: flex;
 }
 
-@media (max-width:1302px) {
-  .spotify-artists, .spotify-tracks, .spotify-genres, .spotify-profile, .credits {
+@media (max-width: 1302px) {
+  .spotify-artists,
+  .spotify-tracks,
+  .spotify-genres,
+  .spotify-profile,
+  .credits {
     width: 100%;
-    margin:auto;
+    margin: auto;
     margin-bottom: 20px;
     flex-direction: column;
   }
   .spotify-profile .spotify-country {
-    left:55%
+    left: 55%;
   }
   .spotify-genres {
     height: auto;
   }
 }
 
-@media (max-width:630px) {
+@media (max-width: 630px) {
   .spotify-tracks .track .track-followers {
     display: none;
   }

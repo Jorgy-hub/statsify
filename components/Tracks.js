@@ -1,14 +1,19 @@
 import axios from 'axios';
 import Link from 'next/link';
 import { useEffect, useState, useCallback } from 'react';
-
 import { library, config } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faCompactDisc } from '@fortawesome/free-solid-svg-icons';
 library.add(faHeart, faCompactDisc);
 config.autoAddCss = false;
 
+/**
+ * In this component we return the Top Tracks box.
+ * @param { string } token 
+ * @returns { JSX }
+ */
 export default function Tracks({ token }) {
+  /** Global variable for the Tracks */
   const [topTracks, setTopTracks] = useState([]);
 
   /** Here we fetch the Top Artists of the Account */
@@ -20,6 +25,7 @@ export default function Tracks({ token }) {
       });
   }, [token]);
 
+  /** Here we call the async function */
   useEffect(() => {
     getTracks();
   }, [getTracks]);

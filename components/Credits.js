@@ -1,3 +1,7 @@
+/**
+ * This is a Simple component, just a box with my personal info.
+ * @returns { JSX }
+ */
 export default function Credits() {
   return (
     <div className="credits">

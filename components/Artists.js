@@ -2,10 +2,15 @@ import axios from 'axios';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useState, useCallback } from 'react';
-
 import { numberWithCommas } from '../utils/number';
 
+/**
+ * In this Component we draw the Top Artists Table.
+ * @param { string } token
+ * @returns { JSX } 
+ */
 export default function Artists({ token }) {
+  /** This is our Global Variable to set Artists */
   const [topArtists, setTopArtists] = useState([]);
 
   /** Here we fetch the Top Artists of the Account */
@@ -17,6 +22,7 @@ export default function Artists({ token }) {
       });
   }, [token]);
 
+  /** Here we call the fetch Function async */
   useEffect(() => {
     getArtists();
   }, [getArtists]);

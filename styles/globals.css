@@ -358,13 +358,13 @@ a {
   height: 80px;
   position: fixed;
   text-align: center;
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgba(0, 0, 0, 0.514);
   z-index: 99;
   transition: all 0.5s ease;
 }
 
 html:not([data-scroll='0']) body .navbar {
-  background-color: rgba(17, 17, 17, 0.74);
+  background-color: rgba(0, 0, 0, 1);
   transition: all 0.5s ease;
 }
 
@@ -387,7 +387,7 @@ html:not([data-scroll='0']) body .navbar {
   background: #000;
   background: radial-gradient(rgb(22, 22, 22), rgb(17, 17, 17));
   color: white;
-  border-top: 4px solid #33d486;
+  border-top: 4px solid #7643a8;
 }
 
 .footer-basic ul {
@@ -414,7 +414,7 @@ html:not([data-scroll='0']) body .navbar {
 
 .footer-basic ul a:hover {
   opacity: 1;
-  color: #33d486;
+  color: #7643a8;
   transition: all 0.5s ease;
 }
 
@@ -433,7 +433,7 @@ html:not([data-scroll='0']) body .navbar {
   display: inline-block;
   text-align: center;
   border-radius: 50%;
-  border: 1px solid #33d486;
+  border: 1px solid #7643a8;
   margin: 2px 8px;
   color: inherit;
   opacity: 0.7;
@@ -451,8 +451,8 @@ html:not([data-scroll='0']) body .navbar {
 
 .footer-basic footer .social > a:hover {
   opacity: 1;
-  border: 1px solid #33d486;
-  color: #33d486;
+  border: 1px solid #7643a8;
+  color: #7643a8;
   transform: scale(1.1);
   transition: all 0.5s ease;
 }
@@ -462,14 +462,14 @@ html:not([data-scroll='0']) body .navbar {
   margin-top: 15px;
   text-align: center;
   font-size: 13px;
-  color: #33d486;
+  color: #7643a8;
   opacity: 0.7;
   margin-bottom: 0;
 }
 
 .wrapper {
   width: 100%;
-  padding: 0rem 2rem;
+  padding: 6rem 2rem;
   display: inline-block;
   overflow: hidden;
 }
@@ -515,7 +515,7 @@ html:not([data-scroll='0']) body .navbar {
   font-weight: 400;
   font-family: 'Rubik', sans-serif;
   font-size: 20px;
-  color: #33d486;
+  color: #7643a8;
   text-align: center;
   transform: translateY(70px);
 }

@@ -4,6 +4,7 @@ import axios from 'axios';
 import Loader from './Loader';
 
 export default function User({ token }) {
+  /** Global variables */
   const [user, setUser] = useState({});
   const [avatar, setAvatar] = useState('https://i.pinimg.com/originals/a3/e6/50/a3e650a67d4422433d94eb032492bbc7.png');
   const [isMount, setMount] = useState(false);
@@ -23,6 +24,7 @@ export default function User({ token }) {
       });
   }, [token]);
 
+  /** Here we call the async function */
   useEffect(() => {
     getProfile();
   }, [getProfile]);

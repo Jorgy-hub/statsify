@@ -4,6 +4,10 @@ import { faInstagram, faGithub, faTwitch, faYoutube } from '@fortawesome/free-br
 library.add(faInstagram, faGithub, faTwitch, faYoutube);
 config.autoAddCss = false;
 
+/**
+ * This is a simple component, here we just return a custom Footer.
+ * @returns { JSX }
+ */
 export default function Footer() {
   return (
     <div className="footer-basic">

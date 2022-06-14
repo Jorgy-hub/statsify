@@ -70,14 +70,16 @@ export default function Home() {
       <Loader />
       <main className={styles.main}>
         {!token && (
-          <a
-            className="btn btn--loginApp-link"
-            href={`${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
-              '%20',
-            )}&response_type=token&show_dialog=true`}
-          >
-            Login to Spotify
-          </a>
+          <div className={styles['login-banner']}>
+            <div
+              className={styles['login-button']}
+              onClick={ () => window.location = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
+                '%20',
+              )}&response_type=token&show_dialog=true`}
+            >
+              Login to Spotify
+            </div>
+          </div>
         )}
         <div className={styles['spotify-container']}>
           {token && (

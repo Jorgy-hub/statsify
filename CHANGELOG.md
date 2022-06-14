@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/Uraraka-Chan/spotistats/compare/v0.1.2...v0.1.3) (2022-06-14)
+
+
+### Features
+
+* **Genres:** added top genres doughnut chart ([e68a9ae](https://github.com/Uraraka-Chan/spotistats/commit/e68a9ae38341079c403a977123808a4c141b6028))
+* **loader:** random flags loader ([544acb7](https://github.com/Uraraka-Chan/spotistats/commit/544acb795e99ec1e2c5b7d544817cf98a910c11c))
+* **Mobile:** 100% mobile support ([00cc4c7](https://github.com/Uraraka-Chan/spotistats/commit/00cc4c788554de8581119ddcdb2a6906d19cf24c))
+* **Navbar:** added navbar ([ab11f3a](https://github.com/Uraraka-Chan/spotistats/commit/ab11f3ae1fddb0a42e90771f241da0851baea24b))
+
+
+### Bug Fixes
+
+* **Api:** fixed error of reloading when service unavailable ([9742b23](https://github.com/Uraraka-Chan/spotistats/commit/9742b238bb80f52a23f863452d053dd0b1765b81))
+
 ### [0.1.2](https://github.com/Uraraka-Chan/spotistats/compare/v0.1.1...v0.1.2) (2022-06-09)
 
 

@@ -22,7 +22,7 @@ export default function Loader() {
         document.getElementById('loader').innerHTML = '';
         setLoad(true);
       }
-    }, 1000);
+    }, 2000);
   }, [loaded]);
   
   return (

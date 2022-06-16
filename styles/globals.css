@@ -1414,7 +1414,7 @@ input[type='button'] {
   font-weight: 600;
   height: 5.4rem;
   line-height: calc(5.4rem - 0.6rem);
-  padding: 0 3rem;
+  padding: 0 0rem;
   margin: 0 0.3rem 1.2rem 0;
   color: white;
   text-decoration: none;

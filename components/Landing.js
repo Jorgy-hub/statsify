@@ -26,7 +26,6 @@ export default function Landing() {
                 )}&response_type=token&show_dialog=true`}
                 className="smoothscroll button stroke"
               >
-                <span className="icon-circle-down" aria-hidden="true"></span>
                 Login to Spotify
               </a>
             </div>

@@ -1,3 +1,4 @@
+import { redirectUri } from '../config_example';
 import { library, config } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faGithub, faTwitch, faYoutube } from '@fortawesome/free-brands-svg-icons';
@@ -36,7 +37,7 @@ export default function Footer() {
         </div>
         <ul className="list-inline">
           <li className="list-inline-item">
-            <a href="http://localhost:3000/">Home</a>
+            <a href={redirectUri}>Home</a>
           </li>
           <li className="list-inline-item">
             <a href="https://discord.com/invite/animazing">Animazing</a>

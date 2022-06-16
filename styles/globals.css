@@ -940,6 +940,34 @@ html:not([data-scroll='0']) body .navbar {
   }
 }
 
+@media (max-width: 462px) {
+  .spotify-genres .genres-info {
+    width: 90%;
+    margin: 0px;
+  }
+  .spotify-genres .genres {
+    width: 90%;
+    margin: 15px;
+    clear: both;
+    transform: translateY(0px);
+  }
+  .spotify-tracks .track .track-index {
+    margin: 2px;
+  }
+  .spotify-tracks .track svg {
+    margin: 10px;
+  }
+  .spotify-tracks .track .track-name {
+    width: 40%;
+    font-size: 10px;
+  }
+  .spotify-artists .artist .artist-name {
+    width: 40%;
+    font-size: 10px;
+  }
+}
+
+
 /* ===================================================================
  *  11. Landing Page 
  *
@@ -1376,30 +1404,9 @@ h3,
   font-size: 2rem;
   line-height: 1.5;
 }
-h4,
-.h04 {
-  font-size: 1.7rem;
-  line-height: 1.76;
-}
-h5,
-.h05 {
-  font-size: 1.4rem;
-  line-height: 1.7;
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-}
-h6,
-.h06 {
-  font-size: 1.3rem;
-  line-height: 1.85;
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-}
 
 .button,
 button,
-input[type='submit'],
-input[type='reset'],
 input[type='button'] {
   display: inline-block;
   font-family: 'Rubik', sans-serif;
@@ -1409,7 +1416,7 @@ input[type='button'] {
   line-height: calc(5.4rem - 0.6rem);
   padding: 0 3rem;
   margin: 0 0.3rem 1.2rem 0;
-  color: #222222;
+  color: white;
   text-decoration: none;
   cursor: pointer;
   text-align: center;
@@ -1423,83 +1430,12 @@ input[type='button'] {
 
 .button:hover,
 button:hover,
-input[type='submit']:hover,
-input[type='reset']:hover,
 input[type='button']:hover,
 .button:focus,
 button:focus,
-input[type='submit']:focus,
-input[type='reset']:focus,
 input[type='button']:focus {
   background-color: #b8b8b8;
   border-color: #b8b8b8;
-  color: #000000;
+  color: white;
   outline: 0;
-}
-
-.button.button-primary,
-button.button-primary,
-input[type='submit'].button-primary,
-input[type='reset'].button-primary,
-input[type='button'].button-primary {
-  background-color: #39b54a;
-  border-color: #39b54a;
-  color: #ffffff;
-}
-
-.button.button-primary:hover,
-button.button-primary:hover,
-input[type='submit'].button-primary:hover,
-input[type='reset'].button-primary:hover,
-input[type='button'].button-primary:hover,
-.button.button-primary:focus,
-button.button-primary:focus,
-input[type='submit'].button-primary:focus,
-input[type='reset'].button-primary:focus,
-input[type='button'].button-primary:focus {
-  background: #309a3f;
-  border-color: #309a3f;
-}
-
-button.full-width,
-.button.full-width {
-  width: 100%;
-  margin-right: 0;
-}
-
-button.medium,
-.button.medium {
-  height: 5.7rem !important;
-  line-height: calc(5.7rem - 0.6rem) !important;
-}
-
-button.large,
-.button.large {
-  height: 6rem !important;
-  line-height: calc(6rem - 0.6rem) !important;
-}
-
-button.stroke,
-.button.stroke {
-  background: transparent !important;
-  color: #a5a5a5 !important;
-}
-
-button.stroke:hover,
-.button.stroke:hover {
-  border: 0.3rem solid #39b54a;
-  color: #39b54a;
-}
-
-button.pill,
-.button.pill {
-  padding-left: 3rem !important;
-  padding-right: 3rem !important;
-  border-radius: 1000px;
-}
-
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
 }

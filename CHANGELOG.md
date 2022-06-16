@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4](https://github.com/Uraraka-Chan/spotistats/compare/v0.1.3...v0.1.4) (2022-06-16)
+
+
+### Features
+
+* **Landing:** Finished the Landing page just missing some details ([21e4e40](https://github.com/Uraraka-Chan/spotistats/commit/21e4e40922f6356fb1e6115b29a9dc96e085e155))
+* **release:** first release ([252ec35](https://github.com/Uraraka-Chan/spotistats/commit/252ec35ad599f33a59b006b6baa51f3fa609cda8))
+
+
+### Bug Fixes
+
+* **actions:** fixed yml ([2b60288](https://github.com/Uraraka-Chan/spotistats/commit/2b60288965350ddbeaf69361271d8e78d277d957))
+
 ### [0.1.3](https://github.com/Uraraka-Chan/spotistats/compare/v0.1.2...v0.1.3) (2022-06-14)
 
 

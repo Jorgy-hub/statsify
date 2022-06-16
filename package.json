@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "export": "next export",
-    "release": "standard-version"
+    "release": "standard-version",
+    "deploy":"next build && next export && git add out/ && git commit -m \"Deploy gh-pages\" && git subtree push --prefix out origin gh-pages"
   },
   "dependencies": {
     "@expo/webpack-config": "^0.16.19",
@@ -27,6 +28,7 @@
   "devDependencies": {
     "eslint": "8.17.0",
     "eslint-config-next": "12.1.6",
+    "eslint-plugin-next": "^0.0.0",
     "standard-version": "^9.5.0"
   }
 }

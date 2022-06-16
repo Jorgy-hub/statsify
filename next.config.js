@@ -4,6 +4,8 @@ const nextConfig = {
   future: { webpack5: false },
   distDir: 'build',
   images: {
+    loader: 'akamai',
+    path:'',
     domains: ['upload.wikimedia.org', 'i.scdn.co'],
   }
 };

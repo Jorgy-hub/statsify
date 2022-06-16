@@ -51,7 +51,9 @@ export default function Genres({ token }) {
         };
         setGenres(data);
         setMount(true);
-      });
+      }).catch(err => {
+          window.location = '/'; 
+      });;
   }, [token]);
 
   /** Here we call the async function */

@@ -17,10 +17,6 @@ export default function User({ token }) {
         setUser(res.data);
         setAvatar(res.data.images[0].url);
         setMount(true);
-      })
-      .catch(err => {
-        if(err.response.status != 503)
-          window.location = '/'; 
       });
   }, [token]);
 
@@ -31,6 +27,18 @@ export default function User({ token }) {
 
   return (
     <>
+      {!isMount && (
+        <style>{`
+          @media (max-width: 1302px) {
+            .spotify-genres {
+              width: 100% !important;
+            }
+          }
+          .spotify-genres {
+            width: 92%;
+          }        
+        `}</style>
+      )}
       {isMount && (
         <div className="spotify-profile">
           <div className="spotify-image" style={{ backgroundImage: `url(${avatar})` }}></div>

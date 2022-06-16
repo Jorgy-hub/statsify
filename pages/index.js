@@ -4,7 +4,6 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 /** Local Files */
-import { authEndpoint, clientId, redirectUri, scopes } from '../config_example';
 import styles from '../styles/Home.module.css';
 import Footer from '../components/Footer';
 import Artists from '../components/Artists';
@@ -13,6 +12,7 @@ import User from '../components/User';
 import Genres from '../components/Genres';
 import Credits from '../components/Credits';
 import Loader from '../components/Loader';
+import Landing from '../components/Landing';
 
 export default function Home() {
   /** Spotify Token State */
@@ -70,16 +70,7 @@ export default function Home() {
       <Loader />
       <main className={styles.main}>
         {!token && (
-          <div className={styles['login-banner']}>
-            <div
-              className={styles['login-button']}
-              onClick={ () => window.location = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
-                '%20',
-              )}&response_type=token&show_dialog=true`}
-            >
-              Login to Spotify
-            </div>
-          </div>
+          <Landing/>
         )}
         <div className={styles['spotify-container']}>
           {token && (

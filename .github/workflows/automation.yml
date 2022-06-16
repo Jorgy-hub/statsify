@@ -1,24 +1,24 @@
-name: Build Next.js web application
-on: push
+name: Node.js CI
+
+on: [push]
+
 jobs:
-  build-project:
-    name: Build Project
-    runs-on: ubuntu-latest
+  build:
+
+    runs-on: self-hosted
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Install NPM dependencies
-        run: npm install
-      - name: Build project assets
-        run: npm run build
-      - name: Upload static webiste
-        uses: actions/upload-artifact@v2
-        with:
-          name: static-site
-          path: build/ 
-      - name: Deploy 🚀
-        uses: Uraraka-Chan/spotistats
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages 
-          FOLDER: build
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm ci
+    - run: npm run build
+    - run: pm2 reload next-js
+      env:
+        CI: true

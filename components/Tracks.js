@@ -19,7 +19,7 @@ export default function Tracks({ token }) {
   /** Here we fetch the Top Artists of the Account */
   const getTracks = useCallback(async () => {
     return axios
-      .get('https://api.spotify.com/v1/me/top/tracks', { headers: { Authorization: `Bearer ${token}` } })
+      .get('https://api.spotify.com/v1/me/top/tracks?time_range=short_term', { headers: { Authorization: `Bearer ${token}` } })
       .then(res => {
         setTopTracks(res.data.items);
       });

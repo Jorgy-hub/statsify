@@ -18,7 +18,7 @@ export default function Genres({ token }) {
   /** In this function we fetch the artists of the account. */
   const getGenres = useCallback(async () => {
     return axios
-      .get('https://api.spotify.com/v1/me/top/artists', { headers: { Authorization: `Bearer ${token}` } })
+      .get('https://api.spotify.com/v1/me/top/artists?time_range=short_term', { headers: { Authorization: `Bearer ${token}` } })
       .then(res => {
         let genresTemp = [];
         res.data.items?.map(artist => {

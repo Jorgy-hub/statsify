@@ -60,7 +60,10 @@ export default function Home() {
           name="description"
           content="Check your Spotify Stats for free without Ads!\nFollow @jorgy.ts on Instagram for more content"
         />
+        <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Spotify_App_Logo.svg/2048px-Spotify_App_Logo.svg.png" />
+        <meta name="author" content="Jorgy-Hub"></meta>
         <meta name="theme-color" content="#33d486"></meta>
+        <meta name="copyright" content="Jorgy-Hub@2022" />
         <link rel="icon" href="./icon.png" />
       </Head>
       <div className="navbar">

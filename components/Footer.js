@@ -19,7 +19,7 @@ export default function Footer() {
               <FontAwesomeIcon icon="fab fa-instagram" />
             </i>
           </a>
-          <a href="https://github.com/Uraraka-Chan">
+          <a href="https://github.com/jorgy-hub">
             <i>
               <FontAwesomeIcon icon="fab fa-github" />
             </i>
@@ -46,10 +46,10 @@ export default function Footer() {
             <a href="https://discord.com/invite/comfy">Comfy</a>
           </li>
           <li className="list-inline-item">
-            <a href="https://github.com/Uraraka-Chan">Credits</a>
+            <a href="https://github.com/jorgy-hub">Credits</a>
           </li>
         </ul>
-        <p className="copyright">Uraraka-Chan © 2022</p>
+        <p className="copyright">Jorgy-Hub © 2022</p>
       </footer>
     </div>
   );

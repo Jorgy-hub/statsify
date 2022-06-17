@@ -31,7 +31,7 @@ export default function Landing() {
             </div>
           </div>
           <div className="home-image-right">
-            <img src="/Phone.png" alt="Phone" data-aos="fade-up" />
+            <img src="./Phone.png" alt="Phone" data-aos="fade-up" />
           </div>
         </div>
       </div>

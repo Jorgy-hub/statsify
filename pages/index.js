@@ -61,7 +61,7 @@ export default function Home() {
           content="Check your Spotify Stats for free without Ads!\nFollow @jorgy.ts on Instagram for more content"
         />
         <meta name="theme-color" content="#33d486"></meta>
-        <link rel="icon" href="/icon.png" />
+        <link rel="icon" href="./icon.png" />
       </Head>
       <div className="navbar">
         <div className="logo" />

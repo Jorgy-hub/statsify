@@ -5,29 +5,38 @@
 
 @font-face {
   font-family: Intro;
-  src: url('/Intro.otf');
-}
-
-@font-face {
-  font-family: Century Gothic;
-  src: url('/CenturyGothic.ttf');
+  src: url('http://fonts.cdnfonts.com/css/intro');
 }
 
 @font-face {
   font-family: Rubik;
-  src: url('/Rubik.ttf');
+  src: url('https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap');
 }
 
 @font-face {
   font-family: Proxima Nova;
-  src: url(/ProximaNova.otf);
+  src: url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.eot');
+	src: url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.woff') format('woff'),
+		 url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.ttf') format('truetype'),
+		 url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.svg#proxima_nova_rgregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
 /* ===================================================================
  *  02. Loader Flags
  *
  * ------------------------------------------------------------------- */
-
+ body::-webkit-scrollbar, .genres-container::-webkit-scrollbar {
+  width: 1em;
+  background-color: rgb(7, 7, 7);
+}
+ 
+body::-webkit-scrollbar-thumb, .genres-container::-webkit-scrollbar-thumb {
+  background-color: rgb(20, 20, 20);
+  border-radius: 50px;
+}
 .loader {
   background: #000;
   background: radial-gradient(#222, #000);
@@ -390,7 +399,7 @@ html:not([data-scroll='0']) body .navbar {
 }
 
 .navbar .title {
-  transform: translateY(-70%);
+  transform: translateY(-85%);
 }
 
 .navbar .logo {
@@ -484,7 +493,7 @@ html:not([data-scroll='0']) body .navbar {
 }
 
 .footer-basic footer .copyright {
-  font-family: 'Century Gothic';
+  font-family: Proxima Nova;
   margin-top: 15px;
   text-align: center;
   font-size: 13px;
@@ -582,7 +591,7 @@ html:not([data-scroll='0']) body .navbar {
   color: rgb(175, 175, 175);
   font-size: 15px;
   font-weight: 600;
-  font-family: Century Gothic;
+  font-family: Proxima Nova;
   margin-bottom: 20px;
 }
 
@@ -603,11 +612,15 @@ html:not([data-scroll='0']) body .navbar {
 
 .spotify-artists .artist .artist-image {
   float: left;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-size: cover;
 }
 
 .spotify-artists .artist .artist-index {
   float: left;
-  font-family: Century Gothic;
+  font-family: Proxima Nova;
   font-size: 15px;
   font-weight: 600;
   color: white;
@@ -636,13 +649,13 @@ html:not([data-scroll='0']) body .navbar {
 }
 
 .spotify-artists .artist .artist-image span {
-  border-radius: 50%;
+ 
 }
 
 .spotify-artists .artist .artist-name {
   margin: 15px;
   float: left;
-  font-family: Century Gothic;
+  font-family: Proxima Nova;
   font-size: 15px;
   font-weight: 600;
   color: white;
@@ -653,7 +666,7 @@ html:not([data-scroll='0']) body .navbar {
   float: right;
   text-align: right;
   color: #929292;
-  font-family: Century Gothic;
+  font-family: Proxima Nova;
   font-size: 15px;
   font-weight: 600;
   margin: 10px;
@@ -690,7 +703,7 @@ html:not([data-scroll='0']) body .navbar {
   color: rgb(175, 175, 175);
   font-size: 15px;
   font-weight: 600;
-  font-family: Century Gothic;
+  font-family: Proxima Nova;
   margin-bottom: 20px;
 }
 
@@ -716,7 +729,7 @@ html:not([data-scroll='0']) body .navbar {
 .spotify-tracks .track .track-index {
   float: left;
   width: 30%;
-  font-family: Century Gothic;
+  font-family: Proxima Nova;
   font-size: 15px;
   font-weight: 600;
   color: white;
@@ -751,7 +764,7 @@ html:not([data-scroll='0']) body .navbar {
   width: 50%;
   margin: 15px;
   float: left;
-  font-family: Century Gothic;
+  font-family: Proxima Nova;
   font-size: 15px;
   font-weight: 600;
   color: white;
@@ -770,7 +783,7 @@ html:not([data-scroll='0']) body .navbar {
   float: right;
   text-align: right;
   color: #929292;
-  font-family: Century Gothic;
+  font-family: Proxima Nova;
   font-size: 15px;
   font-weight: 600;
   margin: 10px;
@@ -819,13 +832,13 @@ html:not([data-scroll='0']) body .navbar {
   color: rgb(175, 175, 175);
   font-size: 15px;
   font-weight: 600;
-  font-family: Century Gothic;
+  font-family: Proxima Nova;
 }
 
 .spotify-genres .genres-info .genres-container {
   margin: 5px;
   height: 170px;
-  overflow: hidden;
+  overflow-y: scroll;
 }
 
 .spotify-genres .genres-info .genres-container div {
@@ -836,7 +849,7 @@ html:not([data-scroll='0']) body .navbar {
   padding: 2px;
   font-size: auto;
   color: rgb(236, 236, 236);
-  font-family: 'Rubik', sans-serif;
+  font-family: Proxima Nova;
 }
 
 .spotify-genres .genres {
@@ -878,7 +891,7 @@ html:not([data-scroll='0']) body .navbar {
   line-height: 25px;
   font-size: 15px;
   font-weight: 600;
-  font-family: Century Gothic;
+  font-family: Proxima Nova;
 }
 
 .credits .credits-profiles {
@@ -899,7 +912,7 @@ html:not([data-scroll='0']) body .navbar {
   background-color: rgb(7, 7, 7);
   color: white;
   font-weight: 600;
-  font-family: Century Gothic;
+  font-family: Proxima Nova;
   display: none;
   border-radius: 8px;
   position: relative;

@@ -40,9 +40,7 @@ export default function Artists({ token }) {
             onClick={() => (window.location = artist.external_urls?.spotify)}
           >
             <div className="artist-index">{i + 1}</div>
-            <div className="artist-image">
-              <Image src={artist.images[0].url} alt={artist.name} width={50} height={50} />
-            </div>
+            <div className="artist-image" style={{backgroundImage: `url(${artist.images[0].url})`}}></div>
             <div className="artist-name">
               <Link href={artist.external_urls.spotify}>{artist.name}</Link>
             </div>

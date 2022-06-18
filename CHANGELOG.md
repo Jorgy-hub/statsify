@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.5](https://github.com/Uraraka-Chan/spotistats/compare/v0.1.4...v0.1.5) (2022-06-18)
+
+
+### Features
+
+* **finished:** Finally done ([c61a292](https://github.com/Uraraka-Chan/spotistats/commit/c61a292aa823cfa56ce5de0768027837ec337aac))
+* **Monthly:** added monthly limitator ([1255396](https://github.com/Uraraka-Chan/spotistats/commit/12553968107eacd1877f046d9821af2e687c0db4))
+* **Pages:** release to Github Pages ([0afefae](https://github.com/Uraraka-Chan/spotistats/commit/0afefaea3cb4f316da39defe20679f32cc2fe253))
+
+
+### Bug Fixes
+
+* fixed all errors ([1f2fb8b](https://github.com/Uraraka-Chan/spotistats/commit/1f2fb8b835a1610f570923401079afc3314eb4e0))
+* **Loader:** loader errors ([e9bca73](https://github.com/Uraraka-Chan/spotistats/commit/e9bca731c8bdfdf43fec24ae1315af045f2a6350))
+* **Mobile:** mobile css fixes ([08c6a59](https://github.com/Uraraka-Chan/spotistats/commit/08c6a591a376b79efc234d7e04b925de2eefd3b3))
+* redirect fix ([9d3ab7a](https://github.com/Uraraka-Chan/spotistats/commit/9d3ab7aa2209292c7c8eab4379ad0e15ccbcfa90))
+* **Verification:** fixed Spotify verification reject ([3dc6353](https://github.com/Uraraka-Chan/spotistats/commit/3dc635325a142bc421a43b0e4c8f4387a9738b97))
+
 ### [0.1.4](https://github.com/Uraraka-Chan/spotistats/compare/v0.1.3...v0.1.4) (2022-06-16)
 
 

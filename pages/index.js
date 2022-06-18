@@ -14,6 +14,19 @@ import Credits from '../components/Credits';
 import Loader from '../components/Loader';
 import Landing from '../components/Landing';
 
+import { library, config } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGem } from '@fortawesome/free-solid-svg-icons';
+library.add(faGem);
+config.autoAddCss = false;
+
+
+const dates = [
+  { label: "1 Month", value: 1 },
+  { label: "6 Months", value: 2 },
+  { label: "1 Year", value: 3 }
+];
+
 export default function Home() {
   /** Spotify Token State */
   const [token, setToken] = useState(null);
@@ -60,7 +73,10 @@ export default function Home() {
           name="description"
           content="Check your Spotify Stats for free without Ads!\nFollow @jorgy.ts on Instagram for more content"
         />
-        <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Spotify_App_Logo.svg/2048px-Spotify_App_Logo.svg.png" />
+        <meta
+          property="og:image"
+          content="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Spotify_App_Logo.svg/2048px-Spotify_App_Logo.svg.png"
+        />
         <meta name="author" content="Jorgy-Hub"></meta>
         <meta name="theme-color" content="#33d486"></meta>
         <meta name="copyright" content="Jorgy-Hub@2022" />
@@ -68,13 +84,14 @@ export default function Home() {
       </Head>
       <div className="navbar">
         <div className="logo" />
-        <div className="title">SpotiStats</div>
+        <div className="title">
+          <FontAwesomeIcon icon="fas fa-gem"/>
+          Gemify
+        </div>
       </div>
       <Loader />
       <main className={styles.main}>
-        {!token && (
-          <Landing/>
-        )}
+        {!token && <Landing />}
         <div className={styles['spotify-container']}>
           {token && (
             <div className="wrapper">

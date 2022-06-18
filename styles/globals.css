@@ -28,11 +28,16 @@
  *  02. Loader Flags
  *
  * ------------------------------------------------------------------- */
- body::-webkit-scrollbar, .genres-container::-webkit-scrollbar {
+.genres-container::-webkit-scrollbar {
   width: 1em;
-  background-color: rgb(7, 7, 7);
+  background-color: rgba(7, 7, 7, 0);
 }
  
+body::-webkit-scrollbar {
+  width: 1em;
+  background-color: rgba(7, 7, 7, 1);
+}
+
 body::-webkit-scrollbar-thumb, .genres-container::-webkit-scrollbar-thumb {
   background-color: rgb(20, 20, 20);
   border-radius: 50px;
@@ -402,6 +407,13 @@ html:not([data-scroll='0']) body .navbar {
   transform: translateY(-85%);
 }
 
+.navbar .title svg {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+  display: inline
+}
+
 .navbar .logo {
   display: inline;
   margin-right: 20px;
@@ -615,7 +627,7 @@ html:not([data-scroll='0']) body .navbar {
   width: 50px;
   height: 50px;
   background-size: cover;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 7px 7px 0px rgba(0, 0, 0, 0.5);
 }
 
 .spotify-artists .artist .artist-index {
@@ -628,10 +640,10 @@ html:not([data-scroll='0']) body .navbar {
   margin-left: 10px;
   margin-right: 20px;
   width: 40px;
-  padding: 10px;
+  padding: 12px;
   height: 40px;
   background-color: rgb(58, 58, 58);
-  border-radius: 15px;
+  border-radius: 50%;
   text-align: center;
   vertical-align: middle;
 }
@@ -737,10 +749,10 @@ html:not([data-scroll='0']) body .navbar {
   margin-left: 10px;
   margin-right: 20px;
   width: 40px;
-  padding: 10px;
+  padding: 12px;
   height: 40px;
   background-color: rgb(58, 58, 58);
-  border-radius: 15px;
+  border-radius: 50%;
   text-align: center;
 }
 
@@ -777,6 +789,8 @@ html:not([data-scroll='0']) body .navbar {
   margin-right: 15px;
   color: white;
   float: left;
+  border-radius: 50%;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 .spotify-tracks .track .track-followers {
@@ -796,6 +810,7 @@ html:not([data-scroll='0']) body .navbar {
   margin-left: 10px;
   color: #929292;
   margin-top: 0px;
+  box-shadow: none;
 }
 
 /* ===================================================================

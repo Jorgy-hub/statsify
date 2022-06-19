@@ -577,7 +577,8 @@ html:not([data-scroll='0']) body .navbar {
  *
  * ------------------------------------------------------------------- */
 
-.spotify-artists {
+.spotify-artists,
+.spotify-tracks  {
   width: 45%;
   height: auto;
   border-radius: 20px;
@@ -585,122 +586,11 @@ html:not([data-scroll='0']) body .navbar {
   margin: 15px;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 20px 20px;
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.spotify-artists .artists-title {
-  margin: 10px;
-  margin-top: 20px;
-  color: white;
-  font-size: 30px;
-  font-weight: 600;
-  font-family: 'Proxima Nova';
-}
-
-.spotify-artists .artists-description {
-  margin: 10px;
-  color: rgb(175, 175, 175);
-  font-size: 15px;
-  font-weight: 600;
-  font-family: Proxima Nova;
-  margin-bottom: 20px;
-}
-
-.spotify-artists .artist {
-  margin: 10px;
-  height: 70px;
-  border-bottom: 2px solid white;
-  background-color: rgba(0, 0, 0, 0);
-  cursor: pointer;
-  transition: all 0.5s ease;
-  overflow: hidden;
-}
-
-.spotify-artists .artist:hover {
-  transform: scale(1.05);
-  transition: all 0.5s ease;
-}
-
-.spotify-artists .artist .artist-image {
-  float: left;
-  width: 50px;
-  height: 50px;
-  background-size: cover;
-  box-shadow: 7px 7px 0px rgba(0, 0, 0, 0.5);
-}
-
-.spotify-artists .artist .artist-index {
-  float: left;
-  font-family: Proxima Nova;
-  font-size: 15px;
-  font-weight: 600;
-  color: white;
-  margin: 5px;
-  margin-left: 10px;
-  margin-right: 20px;
-  width: 40px;
-  padding: 12px;
-  height: 40px;
-  background-color: rgb(58, 58, 58);
-  border-radius: 50%;
-  text-align: center;
-  vertical-align: middle;
-}
-
-.spotify-artists #artist-0 .artist-index {
-  background-color: rgb(201, 163, 40);
-}
-
-.spotify-artists #artist-1 .artist-index {
-  background-color: rgb(216, 216, 216);
-}
-
-.spotify-artists #artist-2 .artist-index {
-  background-color: rgba(187, 67, 20, 1);
-}
-
-.spotify-artists .artist .artist-image span {
- 
-}
-
-.spotify-artists .artist .artist-name {
-  margin: 15px;
-  float: left;
-  font-family: Proxima Nova;
-  font-size: 15px;
-  font-weight: 600;
-  color: white;
-  width: 50%;
-}
-
-.spotify-artists .artist .artist-followers {
-  float: right;
-  text-align: right;
-  color: #929292;
-  font-family: Proxima Nova;
-  font-size: 15px;
-  font-weight: 600;
-  margin: 10px;
-}
-
-/* ===================================================================
- *  08. Spotify Tracks 
- *
- * ------------------------------------------------------------------- */
-
-.spotify-tracks {
-  width: 45%;
-  height: auto;
-  border-radius: 20px;
-  float: left;
-  margin: 15px;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
+.spotify-artists .artists-title,
 .spotify-tracks .tracks-title {
   margin: 10px;
   margin-top: 20px;
@@ -710,6 +600,7 @@ html:not([data-scroll='0']) body .navbar {
   font-family: 'Proxima Nova';
 }
 
+.spotify-artists .artists-description,
 .spotify-tracks .tracks-description {
   margin: 10px;
   color: rgb(175, 175, 175);
@@ -719,33 +610,44 @@ html:not([data-scroll='0']) body .navbar {
   margin-bottom: 20px;
 }
 
+.spotify-artists .artist,
 .spotify-tracks .track {
   margin: 10px;
-  height: 70px;
+  height: 74px;
   border-bottom: 2px solid white;
+  margin-bottom: -2px;
   background-color: rgba(0, 0, 0, 0);
   cursor: pointer;
   transition: all 0.5s ease;
   overflow: hidden;
 }
 
+.spotify-artists .artist:hover,
 .spotify-tracks .track:hover {
   transform: scale(1.05);
   transition: all 0.5s ease;
 }
 
-.spotify-tracks .track .track-image {
+.spotify-artists .artist .artist-image,
+.spotify-tracks .track .track-image,
+.spotify-tracks .track svg {
+  color:white;
   float: left;
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  margin-right: 20px;
+  transform: translateY(10px);
+  box-shadow: 1px 1px rgba(0,0,0,0.7), 2px 2px rgba(0,0,0,0.6), 3px 3px rgba(0,0,0,0.5), 4px 4px rgba(0,0,0,0.4), 5px 5px rgba(0,0,0,0.3), 6px 6px rgba(0,0,0,0.2), 7px 7px rgba(0,0,0,0.1);
 }
 
+.spotify-artists .artist .artist-index, 
 .spotify-tracks .track .track-index {
   float: left;
-  width: 30%;
   font-family: Proxima Nova;
   font-size: 15px;
   font-weight: 600;
   color: white;
-  margin: 5px;
   margin-left: 10px;
   margin-right: 20px;
   width: 40px;
@@ -754,63 +656,79 @@ html:not([data-scroll='0']) body .navbar {
   background-color: rgb(58, 58, 58);
   border-radius: 50%;
   text-align: center;
+  vertical-align: middle;
+  transform: translateY(15px);
 }
 
+.spotify-artists #artist-0 .artist-index, 
 .spotify-tracks #track-0 .track-index {
   background-color: rgb(201, 163, 40);
 }
 
+.spotify-artists #artist-1 .artist-index,
 .spotify-tracks #track-1 .track-index {
   background-color: rgb(216, 216, 216);
 }
 
+.spotify-artists #artist-2 .artist-index,
 .spotify-tracks #track-2 .track-index {
   background-color: rgba(187, 67, 20, 1);
 }
 
-.spotify-tracks .track .track-image span {
-  border-radius: 50%;
-}
-
+.spotify-artists .artist .artist-name,
 .spotify-tracks .track .track-name {
-  width: 50%;
-  margin: 15px;
+  height: auto;
   float: left;
   font-family: Proxima Nova;
   font-size: 15px;
   font-weight: 600;
   color: white;
+  width: 50%;
+  transform: translateY(50%);
+  vertical-align: middle;
+  line-height: 35px;
+  overflow-x: hidden;
+  white-space: nowrap;
 }
 
-.spotify-tracks .track svg {
-  margin: 10px;
-  width: 30px;
-  height: 30px;
-  margin-right: 15px;
-  color: white;
-  float: left;
-  border-radius: 50%;
-  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
-}
-
-.spotify-tracks .track .track-followers {
+.spotify-artists .artist .artist-followers, 
+.spotify-tracks .track .track-followers, 
+.spotify-tracks .track .track-duration  {
+  width: 100px;
   float: right;
   text-align: right;
   color: #929292;
   font-family: Proxima Nova;
   font-size: 15px;
   font-weight: 600;
-  margin: 10px;
+  transform: translateY(20px);
 }
 
-.spotify-tracks .track .track-followers svg {
-  transform: translateY(2.5px);
+/* ===================================================================
+ *  08. Spotify Tracks 
+ *
+ * ------------------------------------------------------------------- */
+
+.spotify-tracks .track svg {
+  transform: translateY(15px);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.spotify-tracks .track .track-followers, 
+.spotify-tracks .track .track-duration {
+  margin: 10px 0px;
+}
+
+.spotify-tracks .track .track-followers svg, 
+.spotify-tracks .track .track-duration svg {
+  transform: translateY(0px);
   height: 15px;
   width: 15px;
-  margin-left: 10px;
-  color: #929292;
-  margin-top: 0px;
   box-shadow: none;
+  float:right;
+  margin-left: 5px;
+  color: #929292;
 }
 
 /* ===================================================================
@@ -861,10 +779,18 @@ html:not([data-scroll='0']) body .navbar {
   float: left;
   margin: 5px;
   border-radius: 6px;
-  padding: 2px;
+  padding: 4px;
   font-size: auto;
   color: rgb(236, 236, 236);
   font-family: Proxima Nova;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.spotify-genres .genres-info .genres-container div:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease;
 }
 
 .spotify-genres .genres {
@@ -940,7 +866,7 @@ html:not([data-scroll='0']) body .navbar {
   display: flex;
 }
 
-@media (max-width: 1302px) {
+@media (max-width: 1340px) {
   .spotify-artists,
   .spotify-tracks,
   .spotify-genres,
@@ -957,18 +883,13 @@ html:not([data-scroll='0']) body .navbar {
   .spotify-genres {
     height: auto;
   }
+  .spotify-artists .artist .artist-name,
+  .spotify-tracks .track .track-name {
+    width: 45%;
+  }
 }
 
 @media (max-width: 630px) {
-  .spotify-tracks .track .track-followers {
-    display: none;
-  }
-  .spotify-artists .artist .artist-followers {
-    display: none;
-  }
-}
-
-@media (max-width: 462px) {
   .spotify-genres .genres-info {
     width: 90%;
     margin: 0px;
@@ -979,22 +900,27 @@ html:not([data-scroll='0']) body .navbar {
     clear: both;
     transform: translateY(0px);
   }
-  .spotify-tracks .track .track-index {
-    margin: 2px;
+  .spotify-artists .artist .artist-index, .spotify-artists .artist .artist-image {
+    margin-right: 10px;
   }
-  .spotify-tracks .track svg {
-    margin: 10px;
-  }
+  .spotify-artists .artist .artist-name,
   .spotify-tracks .track .track-name {
-    width: 40%;
-    font-size: 10px;
-  }
-  .spotify-artists .artist .artist-name {
-    width: 40%;
-    font-size: 10px;
+    width: 35%;
   }
 }
 
+@media (max-width: 500px) {
+  .spotify-tracks .track svg, .spotify-artists .artist .artist-followers {
+    display: none;
+  }
+  .spotify-tracks .track .track-name {
+    width: 40%;
+  }
+  .spotify-tracks .track .track-followers svg, 
+  .spotify-tracks .track .track-duration svg{
+    display: flex;
+  }
+}
 
 /* ===================================================================
  *  11. Landing Page 

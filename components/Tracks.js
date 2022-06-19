@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { useEffect, useState, useCallback } from 'react';
 import { library, config } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart, faCompactDisc } from '@fortawesome/free-solid-svg-icons';
-library.add(faHeart, faCompactDisc);
+import { faHeart, faCompactDisc, faClock } from '@fortawesome/free-solid-svg-icons';
+library.add(faHeart, faCompactDisc, faClock);
 config.autoAddCss = false;
 
 /**
@@ -15,6 +15,11 @@ config.autoAddCss = false;
 export default function Tracks({ token }) {
   /** Global variable for the Tracks */
   const [topTracks, setTopTracks] = useState([]);
+  const millisToMinutesAndSeconds = (millis) => {
+    var minutes = Math.floor(millis / 60000);
+    var seconds = ((millis % 60000) / 1000).toFixed(0);
+    return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
+  }
 
   /** Here we fetch the Top Artists of the Account */
   const getTracks = useCallback(async () => {
@@ -47,10 +52,14 @@ export default function Tracks({ token }) {
             <div className="track-name">
               <Link href={track.external_urls.spotify}>{track.name}</Link>
             </div>
-            <div className="track-followers">
+            <div className="track-duration">
+              {millisToMinutesAndSeconds(track.duration_ms || 0)}
+              <FontAwesomeIcon icon="fas fa-clock" />
+            </div>
+            {/*<div className="track-followers">
               {track.popularity || 0}
               <FontAwesomeIcon icon="fas fa-heart" />
-            </div>
+            </div>*/}   
           </div>
         );
       })}

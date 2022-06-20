@@ -7,7 +7,7 @@ export default function Credits() {
     <div className="credits">
       <div className="credits-title">About the project</div>
       <div className="credits-description">
-        SpotiStats or Jorgify is an ad-free and open source website made with Next.js
+        Statsify is an ad-free and open source website made with Next.js
         <br />
         I originally created this website for my girlfriend since she uses Spotify a lot and loves the music.
         <br />

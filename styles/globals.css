@@ -404,7 +404,7 @@ html:not([data-scroll='0']) body .navbar {
 }
 
 .navbar .title {
-  transform: translateY(-85%);
+  transform: translateY(10px);
 }
 
 .navbar .title svg {
@@ -415,13 +415,10 @@ html:not([data-scroll='0']) body .navbar {
 }
 
 .navbar .logo {
-  display: inline;
-  margin-right: 20px;
-  border-radius: 20px;
-  width: 50px;
-  height: 50px;
-  background-image: '/logo.png';
+  float: left;
+  background-image: url(/Spotify.png);
   background-size: cover;
+  width: 100px;
 }
 
 /* ===================================================================
@@ -432,7 +429,7 @@ html:not([data-scroll='0']) body .navbar {
 .footer-basic {
   padding: 40px 0;
   background: #000;
-  background: radial-gradient(rgb(22, 22, 22), rgb(17, 17, 17));
+  background: radial-gradient(rgb(15, 15, 15), rgb(8, 8, 8));
   color: white;
   border-top: 4px solid #33d486;
 }

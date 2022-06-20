@@ -14,7 +14,7 @@ export default function Landing() {
       <div className="home-content">
         <div className="row contents">
           <div className="home-content-left">
-            <h3 data-aos="fade-up">Welcome to SpotiStats</h3>
+            <h3 data-aos="fade-up">Welcome to Statsify</h3>
             <h1 data-aos="fade-up">
               Check your Monthly <br />
               Spotify Stats for free <br />

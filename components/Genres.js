@@ -2,6 +2,7 @@ import { useEffect, useState, useCallback } from 'react';
 import { CountArrayItems } from '../utils/array';
 import { Doughnut } from 'react-chartjs-2';
 import { Chart, ArcElement, Tooltip } from 'chart.js';
+import { redirectUri } from '../config_example';
 import axios from 'axios';
 Chart.register(ArcElement, Tooltip);
 
@@ -61,7 +62,7 @@ export default function Genres({ token }) {
         setMount(true);
       })
       .catch(err => {
-        window.location = '/';
+        window.location = redirectUri;
       });
   }, [token]);
 

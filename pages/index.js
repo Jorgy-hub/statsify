@@ -16,8 +16,8 @@ import Landing from '../components/Landing';
 
 import { library, config } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGem } from '@fortawesome/free-solid-svg-icons';
-library.add(faGem);
+import { faMoon } from '@fortawesome/free-solid-svg-icons';
+library.add(faMoon);
 config.autoAddCss = false;
 
 
@@ -68,10 +68,10 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>SpotiStats</title>
+        <title>Statsify</title>
         <meta
           name="description"
-          content="Check your Spotify Stats for free without Ads!\nFollow @jorgy.ts on Instagram for more content"
+          content="Check your Spotify Stats for free without Ads! Follow @jorgy.ts on Instagram for more content"
         />
         <meta
           property="og:image"
@@ -85,8 +85,8 @@ export default function Home() {
       <div className="navbar">
         <div className="logo" />
         <div className="title">
-          <FontAwesomeIcon icon="fas fa-gem"/>
-          Gemify
+          <FontAwesomeIcon icon="fas fa-moon"/>
+          Statsify
         </div>
       </div>
       <Loader />

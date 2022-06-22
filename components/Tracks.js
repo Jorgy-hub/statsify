@@ -12,7 +12,7 @@ config.autoAddCss = false;
  * @param { string } token 
  * @returns { JSX }
  */
-export default function Tracks({ token }) {
+export default function Tracks({ token, range, limit }) {
   /** Global variable for the Tracks */
   const [topTracks, setTopTracks] = useState([]);
   const millisToMinutesAndSeconds = (millis) => {
@@ -24,11 +24,11 @@ export default function Tracks({ token }) {
   /** Here we fetch the Top Artists of the Account */
   const getTracks = useCallback(async () => {
     return axios
-      .get('https://api.spotify.com/v1/me/top/tracks?time_range=short_term', { headers: { Authorization: `Bearer ${token}` } })
+      .get('https://api.spotify.com/v1/me/top/tracks?time_range=' + range + '&limit=' + limit, { headers: { Authorization: `Bearer ${token}` } })
       .then(res => {
         setTopTracks(res.data.items);
       });
-  }, [token]);
+  }, [token, range, limit]);
 
   /** Here we call the async function */
   useEffect(() => {

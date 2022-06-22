@@ -11,7 +11,7 @@ Chart.register(ArcElement, Tooltip);
  * @param { string } token
  * @returns { JSX }
  */
-export default function Genres({ token }) {
+export default function Genres({ token, range, limit }) {
   /** This variables are the global genres and the one to check if the operation was completed */
   const [genres, setGenres] = useState({});
   const [isMounted, setMount] = useState(false);
@@ -19,7 +19,7 @@ export default function Genres({ token }) {
   /** In this function we fetch the artists of the account. */
   const getGenres = useCallback(async () => {
     return axios
-      .get('https://api.spotify.com/v1/me/top/artists?time_range=short_term', {
+      .get('https://api.spotify.com/v1/me/top/artists?time_range=' + range + '&limit=' + limit, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then(res => {
@@ -64,7 +64,7 @@ export default function Genres({ token }) {
       .catch(err => {
         window.location = redirectUri;
       });
-  }, [token]);
+  }, [token, range, limit]);
 
   /** Here we call the async function */
   useEffect(() => {

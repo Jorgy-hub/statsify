@@ -1,7 +1,7 @@
 /** Imported Libraries */
 import Head from 'next/head';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 /** Local Files */
 import styles from '../styles/Home.module.css';
@@ -20,16 +20,11 @@ import { faMoon } from '@fortawesome/free-solid-svg-icons';
 library.add(faMoon);
 config.autoAddCss = false;
 
-
-const dates = [
-  { label: "1 Month", value: 1 },
-  { label: "6 Months", value: 2 },
-  { label: "1 Year", value: 3 }
-];
-
 export default function Home() {
   /** Spotify Token State */
   const [token, setToken] = useState(null);
+  const [range, setRange] = useState(`short_term`);
+  const [limit, setLimit] = useState(`10`);
 
   /** Checking if we have information */
   useEffect(() => {
@@ -44,9 +39,7 @@ export default function Home() {
         return i;
       }, {})['access_token'];
     setToken(Token);
-  }, []);
 
-  useEffect(() => {
     const debounce = fn => {
       let frame;
       return (...params) => {
@@ -63,7 +56,7 @@ export default function Home() {
       passive: true,
     });
     storeScroll();
-  });
+  }, [token, range]);
 
   return (
     <div className={styles.container}>
@@ -85,7 +78,7 @@ export default function Home() {
       <div className="navbar">
         <div className="logo" />
         <div className="title">
-          <FontAwesomeIcon icon="fas fa-moon"/>
+          <FontAwesomeIcon icon="fas fa-moon" />
           Statsify
         </div>
       </div>
@@ -96,9 +89,43 @@ export default function Home() {
           {token && (
             <div className="wrapper">
               <User token={token} />
-              <Genres token={token} />
-              <Artists token={token} />
-              <Tracks token={token} />
+              <Genres token={token} range={range} limit={limit} />
+              <Artists token={token} range={range} limit={limit} />
+              <Tracks token={token} range={range} limit={limit} />
+              <div className="config">
+                <div className="config-title">Settings</div>
+                <div className="config-description">
+                  Here you can configure the amount of info you want to display or the time range!
+                </div>
+                <div className="config-options">
+                  <div className="config-option">
+                    <div className="option-title">Time Range</div>
+                    <div className="option-description">
+                      Here you can configure the Time Range you want the result to have, either 1 Month, 6 Months or 1
+                      Year.
+                    </div>
+                    <select onChange={e => setRange(e.target.value)}>
+                      <option value="short_term">1 Month</option>
+                      <option value="medium_term">6 Months</option>
+                      <option value="long_term">1 Year</option>
+                    </select>
+                  </div>
+
+                  <div className="config-option">
+                    <div className="option-title">Results Amount</div>
+                    <div className="option-description">
+                      Here you can configure the Amount of results you want to display between 10 to 50.
+                    </div>
+                    <select onChange={e => setLimit(e.target.value)}>
+                      <option value="10">10</option>
+                      <option value="20">20</option>
+                      <option value="30">30</option>
+                      <option value="40">40</option>
+                      <option value="50">50</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
               <Credits />
             </div>
           )}

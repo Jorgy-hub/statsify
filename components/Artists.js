@@ -9,18 +9,18 @@ import { numberWithCommas } from '../utils/number';
  * @param { string } token
  * @returns { JSX } 
  */
-export default function Artists({ token }) {
+export default function Artists({ token, range, limit }) {
   /** This is our Global Variable to set Artists */
   const [topArtists, setTopArtists] = useState([]);
 
   /** Here we fetch the Top Artists of the Account */
   const getArtists = useCallback(async () => {
     return axios
-      .get('https://api.spotify.com/v1/me/top/artists?time_range=short_term', { headers: { Authorization: `Bearer ${token}` } })
+      .get('https://api.spotify.com/v1/me/top/artists?time_range=' + range + '&limit=' + limit, { headers: { Authorization: `Bearer ${token}` } })
       .then(res => {
         setTopArtists(res.data.items);
       });
-  }, [token]);
+  }, [token, range, limit]);
 
   /** Here we call the fetch Function async */
   useEffect(() => {

@@ -1,10 +1,7 @@
-const path = require('path')
-const withCSS = require('@zeit/next-css')
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  future: { webpack5: false },
+  future: { webpack5: true },
   distDir: 'build',
   images: {
     loader: 'akamai',

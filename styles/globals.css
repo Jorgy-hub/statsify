@@ -822,6 +822,9 @@ html:not([data-scroll='0']) body .navbar {
 .config-option {
   width: 45%;
   float: left;
+  background-color: rgba(0, 0, 0, 0.349);
+  border-radius: 20px;
+  margin: 10px;
 }
 
 .config-option .option-title {
@@ -841,7 +844,7 @@ html:not([data-scroll='0']) body .navbar {
 }
 
 .config-option select {
-  float: left;
+  float: right;
   margin: 10px;
   background-color: #33d486;
   color: white;
@@ -934,6 +937,9 @@ html:not([data-scroll='0']) body .navbar {
   .spotify-artists .artist .artist-name,
   .spotify-tracks .track .track-name {
     width: 35%;
+  }
+  .config-option {
+    width: 90%;
   }
 }
 

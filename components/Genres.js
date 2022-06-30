@@ -28,13 +28,7 @@ export default function Genres({ token, range, limit }) {
           artist.genres?.map(genre => genresTemp.push(genre));
         });
         let randomColor = () =>
-          'rgba(' +
-          Math.floor(Math.random() * 256) +
-          ', ' +
-          Math.floor(Math.random() * 256) +
-          ',' +
-          Math.floor(Math.random() * 256) +
-          ', 0.8)';
+          'rgba(' + Math.random() * 256 + ', ' + Math.random() * 256 + ',' + Math.random() * 256 + ', 0.8)';
         let randomPastel = () =>
           'hsl(' + 360 * Math.random() + ',' + (25 + 70 * Math.random()) + '%,' + (85 + 10 * Math.random()) + '%)';
 

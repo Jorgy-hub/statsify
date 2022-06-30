@@ -420,8 +420,13 @@ html:not([data-scroll='0']) body .navbar {
 .navbar .logo {
   float: left;
   background-image: url(/Spotify.png);
-  background-size: cover;
-  width: 100px;
+  background-size:contain;
+  background-repeat: no-repeat;
+  filter: brightness(0) invert(1);
+  width: 200px;
+  height: 60px;
+  margin-left: 10px;
+  transform: translateY(10px);
 }
 
 /* ===================================================================
@@ -954,6 +959,10 @@ html:not([data-scroll='0']) body .navbar {
   .spotify-tracks .track .track-followers svg,
   .spotify-tracks .track .track-duration svg {
     display: flex;
+  }
+  .navbar .logo {
+    width: 100px;
+    transform: translateY(25px);
   }
 }
 

@@ -26,6 +26,7 @@ export default function Tracks({ token, range, limit }) {
     return axios
       .get('https://api.spotify.com/v1/me/top/tracks?time_range=' + range + '&limit=' + limit, { headers: { Authorization: `Bearer ${token}` } })
       .then(res => {
+        console.log(res.data);
         setTopTracks(res.data.items);
       });
   }, [token, range, limit]);
@@ -48,7 +49,8 @@ export default function Tracks({ token, range, limit }) {
             onClick={() => (window.location = track.external_urls?.spotify)}
           >
             <div className="track-index">{i + 1}</div>
-            <FontAwesomeIcon icon="fas fa-compact-disc" />
+            <div className="track-image" style={{backgroundImage: `url(${track.album.images[0].url})`}}></div>
+            { /* <FontAwesomeIcon icon="fas fa-compact-disc" /> */ }
             <div className="track-name">
               <Link href={track.external_urls.spotify}>{track.name}</Link>
             </div>

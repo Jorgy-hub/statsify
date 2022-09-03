@@ -19,7 +19,14 @@ export default function Credits() {
           style={{ backgroundImage: 'url(https://avatars.githubusercontent.com/u/71365133?v=4)' }}
           onClick={() => (window.location = 'https://www.instagram.com/jorgy.ts/')}
         >
-          <span className="profile-name">jorgy.ts</span>
+          { /* <span className="profile-name">jorgy.ts</span> */ }
+        </div>
+        <div
+          className="profile"
+          style={{ backgroundImage: 'url(https://i.imgur.com/iuyMV3P.jpg)' }}
+          onClick={() => (window.location = 'https://www.instagram.com/earlysunsets._/')}
+        >
+          { /*<span className="profile-name">my gf!</span>*/ }
         </div>
       </div>
     </div>

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /** Imported Libraries */
 import Head from 'next/head';
 import Image from 'next/image';
@@ -20,6 +21,7 @@ import { faMoon } from '@fortawesome/free-solid-svg-icons';
 library.add(faMoon);
 config.autoAddCss = false;
 
+// eslint-disable-next-line @next/next/no-img-element
 export default function Home() {
   /** Spotify Token State */
   const [token, setToken] = useState(null);
@@ -76,7 +78,8 @@ export default function Home() {
         <link rel="icon" href="./icon.png" />
       </Head>
       <div className="navbar">
-        <div className="logo" />
+        
+        <img className="logo" src="./Spotify.png" alt="Phone" data-aos="fade-up" />
         <div className="title">
           <FontAwesomeIcon icon="fas fa-moon" />
           Statsify

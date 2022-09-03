@@ -4,7 +4,5 @@ export const redirectUri = "https://jorgy-hub.github.io/statsify/";
 //export const redirectUri = "http://localhost:3000";
 export const scopes = [
     "user-read-private",
-    "user-top-read",
-    "user-read-currently-playing",
-    "user-read-playback-state",
+    "user-top-read"
 ];

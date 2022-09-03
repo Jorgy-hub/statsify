@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.6](https://github.com/Uraraka-Chan/spotistats/compare/v0.1.5...v0.1.6) (2022-09-03)
+
+
+### Features
+
+* **Settings:** added settings menu ([1166d87](https://github.com/Uraraka-Chan/spotistats/commit/1166d871c1955b5a5094aee1b11ddbe723516fa8))
+
+
+### Bug Fixes
+
+* **Mobile:** fixed css of mobile viewport ([64924b2](https://github.com/Uraraka-Chan/spotistats/commit/64924b294132880b4cbf767e5c3d4c63f755eb65))
+* **Name:** new name! ([826734a](https://github.com/Uraraka-Chan/spotistats/commit/826734a14cd0b09ccd428e359239662f4633123e))
+
 ### [0.1.5](https://github.com/Uraraka-Chan/spotistats/compare/v0.1.4...v0.1.5) (2022-06-18)
 
 
